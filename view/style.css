@@ -1,0 +1,25 @@
+.body {background:#e8e8e8;text-align: center;}
+.wrapper{
+background: #E8E8E8;
+height:600px;
+display: block;
+font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
+color: #29A0F9;
+text-align: center;
+font-size: 15px;
+line-height: 100%;
+box-shadow: 0 0 0px #011331;
+border-radius: 5px;
+padding: 10px;
+overflow: hidden;
+margin: 10px auto;
+border:0px;
+}
+h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
+h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}
+h5{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
+.form_register{text-align:center;}
+#button{text-align:left;}
+#max{background: #E8E8E8;}
+.form{margin-left:36%;}
+.input {height:30px; line-height:30px;border-right:none; width:150px;;border:1px solid #CCC;vertical-align:middle;}

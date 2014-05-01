@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>
+I++ 俱乐部14届招新报名
+</title>
+
+<script type="text/javascript" src="jquery-1.9.1.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+
+
+<script type="text/javascript">
+
+function hover(id,action)
+{
+	obj=document.getElementById(id);
+	obj.src="./"+action+"hover.png";
+}function leave(id,action)
+{
+	obj=document.getElementById(id);
+	obj.src="./"+action+".png";
+}
+
+function handInRegister()//判断输入&&提交表单
+{
+	obj=document.getElementById("studentID");
+	if(obj.value<71112000||obj.value>71112500)
+	{
+		document.getElementById("alert_danger").style.display="block";
+	}
+	else
+		document.getElementById("register").submit();
+}
+function hideAlert()
+{
+	document.getElementById("alert_danger").style.display="none";
+}
+</script>
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="Buttons\css\buttons.css"/>
+<link rel="stylesheet" type="text/css" href="Buttons\css\font-awesome.min.css"/>
+<style type="text/css">
+body {background:#e8e8e8;text-align: center;}
+a {star:expression(this.onFocus=this.blur());}
+.wrapper{
+background:#E8E8E8;
+height:600px;
+display: block;
+font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
+color:#29A0F9;
+text-align: center;
+font-size: 15px;
+line-height: 50%;
+box-shadow: 0 0 0px #011331;
+border-radius: 5px;
+padding: 10px;
+overflow: hidden;
+margin: 0px auto;
+}
+h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
+h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}
+.form_register{text-align:center;}
+#button{text-align:left;}
+#login{text-align:left;decoration:none;border:0px;}
+.form{margin-left:36%;}
+.input {height:40px; line-height:30px;border-right:none; width:180px;;border:1px solid #CCC;vertical-align:middle;}
+#alert_danger{display:none;}
+#max{background: #E8E8E8}
+#alert_danger
+{
+	position: absolute;
+	top:5px;
+	left: 30px;
+	width: 1300px;
+}
+</style>
+</head>
+
+<body  id="max">
+<div class=wrapper>
+<div id="alert_danger" class="alert alert-danger">账号输入错误</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<h1 align=center>I++ 俱乐部14届招新报名</h1>
+<br/>
+<br/>
+<div class=form_register>
+<form  id="register" action="../controller/register.php" method=post onsubmit="return check()">
+
+<div class=form>
+<h2>学号:
+<input type=text class=input placeholder="请输入学号" id="studentID" name="studentID" onfocus="hideAlert()"/><br/></h2>
+<h2>姓名:
+<input type=text class=input placeholder="请输入姓名" name="name" onfocus="hideAlert()"/></h2>
+<h2>手机:
+<input type=text class=input placeholder="请输入手机" name="phone" onfocus="hideAlert()"/></h2>
+<h2>密码:
+<input type=password class=input placeholder="请输入密码" name="pwd" onfocus="hideAlert()"/></h2>
+</div>
+
+</form>
+<br/><br/><br/><br/>
+<a href="#" onclick="handInRegister()" class="button button-circle button-flat-primary">报名</a>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<a href="./login.html" class="button button-circle button-flat-primary">修改信息</a>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+</div>
+
+</div>
+
+</body>
+</html>
