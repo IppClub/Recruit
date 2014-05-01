@@ -10,9 +10,9 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/style.css">
 
 <body  id="max" >

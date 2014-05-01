@@ -5,7 +5,7 @@
  *
  * Designed and built with all the love in the world by @mdo and @fat.
  */
-<script type="text/javascript" src="jquery-1.9.1.js"></script>
+
 if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery") }
 
 /* ========================================================================

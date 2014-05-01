@@ -15,10 +15,10 @@ overflow: hidden;
 margin: 10px auto;
 border:0px;
 }
-h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
-h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}
-h5{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
-.form_register{text-align:center;}
+/*h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}*/
+/*h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}*/
+/*h5{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}*/
+/*.form_register{text-align:center;}*/
 #button{text-align:left;}
 #max{background: #E8E8E8;}
 .form{margin-left:36%;}

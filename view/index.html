@@ -3,30 +3,30 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
-I++ 俱乐部14届招新报名
+	I++ 俱乐部14届招新报名
 </title>
-
-<script type="text/javascript" src="jquery-1.9.1.js"></script>
-<script type="text/javascript" src="bootstrap.min.js"></script>
-<script type="text/javascript" src="bootstrap.js"></script>
+<script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
 
 
 <script type="text/javascript">
-
 function hover(id,action)
 {
 	obj=document.getElementById(id);
-	obj.src="./"+action+"hover.png";
+	obj.src="./resources/"+action+"hover.png";
 }function leave(id,action)
 {
 	obj=document.getElementById(id);
-	obj.src="./"+action+".png";
+	obj.src="./resources/"+action+".png";
 }
 
 function handInRegister()//判断输入&&提交表单
 {
 	obj=document.getElementById("studentID");
-	if(obj.value<71112000||obj.value>71112500)
+	// here should be fixed
+	// the range of the studentId is not correct
+	if(obj.value<71113000 || obj.value>71113500)
 	{
 		document.getElementById("alert_danger").style.display="block";
 	}
@@ -39,16 +39,17 @@ function hideAlert()
 }
 </script>
 
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="Buttons\css\buttons.css"/>
-<link rel="stylesheet" type="text/css" href="Buttons\css\font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="./Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="./Buttons/css/font-awesome.min.css"/>
 <style type="text/css">
+
 body {background:#e8e8e8;text-align: center;}
 a {star:expression(this.onFocus=this.blur());}
-.wrapper{
+/*.wrapper{
 background:#E8E8E8;
 height:600px;
 display: block;
@@ -62,59 +63,114 @@ border-radius: 5px;
 padding: 10px;
 overflow: hidden;
 margin: 0px auto;
+}*/
+h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
+h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
+
+.header {
+	margin-top: 2%;
 }
-h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
-h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}
-.form_register{text-align:center;}
-#button{text-align:left;}
-#login{text-align:left;decoration:none;border:0px;}
-.form{margin-left:36%;}
-.input {height:40px; line-height:30px;border-right:none; width:180px;;border:1px solid #CCC;vertical-align:middle;}
+.register_form{
+/*	-webkit-filter: blur(0px);
+       -moz-filter: blur(0px);
+        -ms-filter: blur(0px);    
+            filter: blur(0px);  */
+	/*margin-left:0%;*/
+    margin-top:5%;
+	text-align:center;
+}
+
+.blur {    
+}
+.bgImage{
+/*    -webkit-filter: blur(5px);
+       -moz-filter: blur(5px);
+        -ms-filter: blur(5px);    
+            filter: blur(5px);    
+*/	height: 500px;
+	width: 100%;
+	margin-top: 3%;
+	padding: 28px;
+	/*top: 5%;*/
+	background: url(./resources/TempBgm.jpg) no-repeat -50px -230px;
+}
+.input {
+	height:40px;
+	line-height:30px;
+	border-right:none;
+	width:20%;
+	margin: 0.5%;
+	border:1px solid #CCC;
+	vertical-align:middle;
+}
+#button{
+	text-align:left;
+}
+#login{
+	text-align:left;
+	decoration:none;
+	border:0px;
+}
 #alert_danger{display:none;}
-#max{background: #E8E8E8}
-#alert_danger
-{
+/*#max{background: #E8E8E8}*/
+#alert_danger{
 	position: absolute;
 	top:5px;
 	left: 30px;
 	width: 1300px;
 }
+.operatebtns{
+	font-family: "微软雅黑";
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2%;
+	width: 10%;
+	height: 5%;
+	font-size: 20px;
+}
+#registerbtn{
+	margin-right: 2%;
+}
+#loginbtn{
+	margin-left: 2%;
+}
+
 </style>
 </head>
 
-<body  id="max">
-<div class=wrapper>
+<!-- what does the fuck id 'max' mean?
+who write this comment?! shit..! -->
+<body>
+
 <div id="alert_danger" class="alert alert-danger">账号输入错误</div>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1 align=center>I++ 俱乐部14届招新报名</h1>
-<br/>
-<br/>
-<div class=form_register>
-<form  id="register" action="../controller/register.php" method=post onsubmit="return check()">
-
-<div class=form>
-<h2>学号:
-<input type=text class=input placeholder="请输入学号" id="studentID" name="studentID" onfocus="hideAlert()"/><br/></h2>
-<h2>姓名:
-<input type=text class=input placeholder="请输入姓名" name="name" onfocus="hideAlert()"/></h2>
-<h2>手机:
-<input type=text class=input placeholder="请输入手机" name="phone" onfocus="hideAlert()"/></h2>
-<h2>密码:
-<input type=password class=input placeholder="请输入密码" name="pwd" onfocus="hideAlert()"/></h2>
+<div name="formDiv" class="bgImage ">
+<div class="header">
+	<h1 >I++ 俱乐部14届招新报名</h1>
 </div>
-
-</form>
-<br/><br/><br/><br/>
-<a href="#" onclick="handInRegister()" class="button button-circle button-flat-primary">报名</a>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<a href="./login.html" class="button button-circle button-flat-primary">修改信息</a>
-<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+	<div class="register_form  ">
+	<form id="register" action="../controller/register.php" method="post" onsubmit="return check()">
+		<h2>学号&nbsp;&nbsp;&nbsp;
+		<input type=text class="input" placeholder="71113****" id="studentID" name="studentID" onfocus="hideAlert()"/><br/></h2>
+		<h2>姓名&nbsp;&nbsp;&nbsp;
+		<input type=text class="input" placeholder="王尼玛" name="name" onfocus="hideAlert()"/></h2>
+		<h2>手机&nbsp;&nbsp;&nbsp;
+		<input type=text class="input" placeholder="18XXXXXXX" name="phone" onfocus="hideAlert()"/></h2>
+		<h2>密码&nbsp;&nbsp;&nbsp;
+		<input type=password class="input" placeholder="******" name="pwd" onfocus="hideAlert()"/></h2>
+	</form>
+	</div>
+	<!-- </div> -->
 </div>
-
+<div id="operatebtns">
+	<a id="registerbtn" href="#" onclick="handInRegister()" class="operatebtns btn btn-primary btn-lg">报名注册</a>
+	<a id="loginbtn" href="./login.html" class="operatebtns btn btn-default btn-lg">登陆查看</a>
 </div>
 
 </body>
 </html>
+<!-- <br/><br/><br/><br/> -->
+<!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
+	<!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+<!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+
+<!-- </div> -->
