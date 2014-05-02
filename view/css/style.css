@@ -21,10 +21,10 @@ margin: 0px auto;
     left: 39%;
     top: 7%;
 }
-#registerForm{
+#register_form{
     display: none;
 }
-#registerForm{
+#register_form{
 /*  -webkit-filter: blur(0px);
        -moz-filter: blur(0px);
         -ms-filter: blur(0px);    
@@ -40,7 +40,7 @@ margin: 0px auto;
        -moz-filter: blur(5px);
         -ms-filter: blur(5px);    
             filter: blur(5px);   }*/
-.bgImage{
+.bg_image{
        
     position: fixed;
     height: 70%;
@@ -108,9 +108,9 @@ input{
 #registerbtn{
     /*position: fixed;*/
     left:38%;
-    margin-right: 5%;
+    /*margin-right: 5%;*/
 }
 #loginbtn{
-    right:38%;
-    margin-left: 5%;
+    left:38%;
+    margin-left: 15%;
 }

@@ -11,19 +11,13 @@
 
 
 <script type="text/javascript">
+var choice = 1;//0 for login, 1 for register
+
 $(document).ready(function(){
 	//load title animation
 	$("#headtitle").css("display","none");
 	$("#headtitle").fadeIn("slow");
 	$("#headtitle").css("display","inline");
-
-	//load text input slide animation
-	$("#registerForm").css("display","none");
-	$("#registerForm").slideDown("slow");
-	// $("#registerForm").animate({
-		// left:	
-	// })
-	$("#registerForm").css("display","inline");
 
 	//load buttons animation
 	$("#operatebtns").css("display","none");
@@ -34,18 +28,6 @@ $(document).ready(function(){
 	$("#bgm").css("display","none");
 	$("#bgm").fadeIn("slow");
 	$("#bgm").css("display","inline");
-
-	//switch page
-	$("#loginbtn").click(function(){
-		$("#bgm").slideUp("slow");
-		$("#headtitle").fadeOut("slow");
-		$("#operatebtns").fadeOut("slow",function(){
-			window.location.href = "./login.html";
-			
-		});
-
-	})
-
 });
 
 
@@ -59,20 +41,38 @@ function leave(id,action){
 	obj.src="./resources/"+action+".png";
 }
 
-function handInRegister(){
-	//judge input and post form
-	obj=document.getElementById("studentID");
-	// here should be fixed
-	// the range of the studentId is not correct
-	if(obj.value<71113000 || obj.value>71113500)
-	{
-		document.getElementById("alert_danger").style.display="block";
-	}
-	else
-		document.getElementById("register").submit();
+function backChocie(){
+	$("#login_choice").fadeIn();
+	$("#register_choice").fadeIn();
+	$("#register_form").slideUp();
 }
+
+function displayLoginSection(){
+	$("#register_form").css("display","none");
+	$("#register_form").slideDown("slow");
+	$("#register_form").css("display","inline");
+	$("#registerSection").slideUp("slow");
+
+	$("#login_choice").fadeOut();
+	$("#register_choice").fadeOut();
+	choice = 0;
+	alert(choice);
+}
+
+function displayRegisterSection(){
+	$("#register_form").css("display","none");
+	$("#register_form").slideDown();
+	$("#registerSection").slideDown();
+	$("#register_form").css("display","inline");
+
+	$("#register_choice").fadeOut();
+	$("#login_choice").fadeOut();
+	choice = 1;
+	alert(choice);
+}
+
+
 function hideAlert(){
-	// blur();
 	document.getElementById("alert_danger").style.display="none";
 }
 </script>
@@ -88,25 +88,49 @@ h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
 
 
+.choice{
+	position: fixed;
+	font-size: 20px;
+	width: 44%;
+	left:38%;
+	top:40%;
+	font-family: "Microsoft Yahei";
+}
+#login_choice{
+	margin-left: 5%;
+}
+#register_choice{
+	margin-right: 5%;
+}
+
 </style>
 </head>
 
 <body>
 
 <div id="alert_danger" class="alert alert-danger"> 账号输入错误 </div>
-<div id="bgm" name="formDiv" class="bgImage">
+<div id="bgm" name="from_div" class="bg_image">
 	<div id="headtitle" class="header">
 		<h1>I++ Club 2014招新</h1>
 	</div>
-	<div id="registerForm" class="registerForm">
+
+	<div id="choice" class="choice">
+		
+		<button class="btn btn-default btn-lg " id="register_choice" onclick="displayRegisterSection()">报名加入I++</button>
+		<button class="btn btn-default btn-lg " id="login_choice" onclick="displayLoginSection()">已有账号登陆</button>
+		
+
+	</div>
+
+	<div id="register_form" class="register_form">
 		<form id="register" action="../controller/register.php" method="post" >
 		<div id="loginSection">
 			<h2>姓名&nbsp;&nbsp;
 			<input type=text class="inputframe" placeholder=" 王尼玛" name="name" onfocus="hideAlert()"/></h2>
 			<h2>密码&nbsp;&nbsp;
 			<input type=password class="inputframe" placeholder=" ******" name="pwd" onfocus="hideAlert()"/></h2>
-		</div id="registerSection">
-		<div>
+		</div>
+		<div id="registerSection">
 			<h2>学号&nbsp;&nbsp;
 			<input type=text class="inputframe" placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
 			<h2>手机&nbsp;&nbsp;
@@ -116,8 +140,8 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 	</div>
 </div>
 <div id="operatebtns">
-	<a id="registerbtn" href="#" onclick="handInRegister()" class="operatebtns btn btn-primary btn-lg">报名注册</a>
-	<a id="loginbtn"  class="operatebtns btn btn-default btn-lg">登陆查看</a>
+	<a id="registerbtn" href="#" onclick="backChocie()" class="operatebtns btn btn-primary btn-lg">返回</a>
+	<a id="loginbtn" class="operatebtns btn btn-default btn-lg">继续</a>
 </div>
 </body>
 </html>
