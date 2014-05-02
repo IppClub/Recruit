@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 11:14:09
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:44:22
          compiled from "..\mysmarty\templates\info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12395518a5d508b4f05-09048999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '186469efd64ad4e8bbf4297977f46622d495184d' => 
     array (
       0 => '..\\mysmarty\\templates\\info.tpl',
-      1 => 1398953326,
+      1 => 1399041859,
       2 => 'file',
     ),
   ),
@@ -20,55 +20,63 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'info' => 0,
-    'ID' => 0,
-    'name' => 0,
-    'phone' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_518a5d509bf858_19602989')) {function content_518a5d509bf858_19602989($_smarty_tpl) {?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php if ($_valid && !is_callable('content_518a5d509bf858_19602989')) {function content_518a5d509bf858_19602989($_smarty_tpl) {?>﻿<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
-I++ 俱乐部14届招新报名
+I++ 报名结结果
 </title>
+
+<style type="text/css">
+h1{
+    font-family: "Microsoft Yahei";
+}
+h2{
+    font-family: "Microsoft Yahei";
+}
+.info_frame{
+    position: fixed;
+    top: 26%;
+    width: 70%;
+    left: 37%;
+    height: 60%;
+}
+.info_btn{
+    position: fixed;
+    top: 70%;
+    width: 20%;
+    left: 35%;
+    height: 10%;
+    font-family:"Microsoft Yahei";
+    font-size: 30px;
+}
+</style>
 </head>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/style.css">
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/style.css">
 
-<body  id="max" >
+<body>
 
-<div class=wrapper>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1 align=center>I++ 俱乐部14届招新报名</h1>
-<br/>
-<br/>
-<h1 align=center ><font color=red><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
-</font><h1>
-<br/>
-<br/>
-<!-- <h1 align=center >学号：<?php echo $_smarty_tpl->tpl_vars['ID']->value;?>
- <h1>
-<h1 align=center >姓名：<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
- <h1>
-<h1 align=center >电话：<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
- <h1>
- -->
-<a href="../view/index.html"  class="button button-circle button-flat-primary">返回首页</a>
+<div id="header" class="header">
+    <h1>报名结果</h1>
+</div>
+<div class="info_frame">
+    <h1><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
+<h1>
+</div>
+
+<div id="info_btn">
+    <button href="../../index.html" class="info_btn btn btn-primary btn-lg">回到首页</button>
 </div>
 
 </body>

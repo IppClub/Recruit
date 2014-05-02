@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:20:08
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:38:01
          compiled from "..\mysmarty\templates\modify.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:16148517d64f2cc0ae3-36852174%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd5224a200cc6e2088da36ce3abc353192b059ead' => 
     array (
       0 => '..\\mysmarty\\templates\\modify.tpl',
-      1 => 1399040399,
+      1 => 1399041478,
       2 => 'file',
     ),
   ),
@@ -20,12 +20,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'variables' => 
   array (
     'name' => 0,
-    'studentID1' => 0,
-    'name1' => 0,
-    'studentID2' => 0,
-    'name2' => 0,
-    'studentID3' => 0,
-    'name3' => 0,
     'studentID' => 0,
     'phone' => 0,
   ),
@@ -36,7 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
-I++ 俱乐部14届招新报名
+I++ 俱乐部报名
 </title>
 <script>
 function hover()
@@ -62,55 +56,46 @@ function modify(){
 <link rel="stylesheet" type="text/css" href="../../view/css/style.css">
 
 <style text="text/css">
-/*.input{
-    outline: none;
-    border-radius: 10px;
-    height:40px;
-    width:240px;
-    line-height:30px;
-    border-right:none;
-    margin: 0.5%;
-    vertical-align:middle;
-}*/
+h1{
+    font-family: "Microsoft Yahei";
+}
+h2{
+    font-family: "Microsoft Yahei";
+}
+.modify_frame{
+    position: fixed;
+    top: 28%;
+    width: 70%;
+    left: 34%;
+    height: 60%;
+}
+.modify_btn{
+    position: fixed;
+    top: 73%;
+    width: 20%;
+    left: 37%;
+    height: 10%;
+    font-family:"Microsoft Yahei";
+    font-size: 30px;
+}
 </style>
 </head>
 <body>
+<div id="header" class="header">
+    <h1>报名个人信息</h1>
+</div>
+<div id="modify_frame" class="modify_frame">
+    <form id="modify_info" action="./infoModify.php" method=post>
+        <h2>姓名: <input class="input" type=text placeholder="姓名" name="name" value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+" /></h2>
+        <h2>学号: <input class="input" type=text placeholder="学号" name="studentID" value="<?php echo $_smarty_tpl->tpl_vars['studentID']->value;?>
+" /></h2>
+        <h2>电话: <input class="input" type=text placeholder="手机" name="phone" value="<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
+" /></h2>
+    </form>
+</div>
 <div>
-<!-- <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
- -->
- <h1>I++ 俱乐部14届招新报名</h1>
-<!-- <br/> -->
-<!-- <h1 align=center >队长：<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
- <h1>
-
-<form id="group_info" action="./groupmodify.php" method=post>
-<h5 align=center >队员一：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID1" value="<?php echo $_smarty_tpl->tpl_vars['studentID1']->value;?>
-" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name1" value="<?php echo $_smarty_tpl->tpl_vars['name1']->value;?>
-" /></h5>
-<h5 align=center >队员二：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID2" value="<?php echo $_smarty_tpl->tpl_vars['studentID2']->value;?>
-" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name2" value="<?php echo $_smarty_tpl->tpl_vars['name2']->value;?>
-" /></h5>
-<h5 align=center >队员三：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID3" value="<?php echo $_smarty_tpl->tpl_vars['studentID3']->value;?>
-" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name3" value="<?php echo $_smarty_tpl->tpl_vars['name3']->value;?>
-" /></h5>
-</form>
- -->
-<form id="modify_info" action="./infoModify.php" method=post>
-<h2>学号：<input class="input" type=text placeholder="学号" name="studentID" value="<?php echo $_smarty_tpl->tpl_vars['studentID']->value;?>
-" /></h2>
-<h2>姓名：<input class="input" type=text placeholder="姓名" name="name" value="<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
-" /></h2>
-<h2>手机：<input class="input" type=text placeholder="手机" name="phone" value="<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
-" /></h2>
-</form>
-
-<a href="#" onclick="modify()" class="btn btn-primary btn-lg">修改</a>
-
+    <button href="#" onclick="modify()" class="modify_btn btn btn-primary btn-lg">修改信息</button>
 </div>
 
 </body>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 15:43:28
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:39:33
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210875361e222c55029-73528568%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1399038191,
+      1 => 1399039936,
       2 => 'file',
     ),
   ),
@@ -62,7 +62,7 @@ I++ 俱乐部14届招新报名
 <h1 align=center >电话：<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
  <h1>
 
-<a href="../../index.html"  class="button button-circle button-flat-primary">返回首页</a>
+<a href="../../index.html"  class="operatebtns button button-circle button-flat-primary">返回首页</a>
 </div>
 
 </body>

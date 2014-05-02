@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
-I++ 俱乐部14届招新报名
+I++ 俱乐部报名
 </title>
 <script>
 function hover()
@@ -29,45 +29,43 @@ function modify(){
 <link rel="stylesheet" type="text/css" href="../../view/css/style.css">
 
 <style text="text/css">
-/*.input{
-    outline: none;
-    border-radius: 10px;
-    height:40px;
-    width:240px;
-    line-height:30px;
-    border-right:none;
-    margin: 0.5%;
-    vertical-align:middle;
-}*/
+h1{
+    font-family: "Microsoft Yahei";
+}
+h2{
+    font-family: "Microsoft Yahei";
+}
+.modify_frame{
+    position: fixed;
+    top: 28%;
+    width: 70%;
+    left: 34%;
+    height: 60%;
+}
+.modify_btn{
+    position: fixed;
+    top: 73%;
+    width: 20%;
+    left: 37%;
+    height: 10%;
+    font-family:"Microsoft Yahei";
+    font-size: 30px;
+}
 </style>
 </head>
 <body>
+<div id="header" class="header">
+    <h1>报名个人信息</h1>
+</div>
+<div id="modify_frame" class="modify_frame">
+    <form id="modify_info" action="./infoModify.php" method=post>
+        <h2>姓名: <input class="input" type=text placeholder="姓名" name="name" value="{$name}" /></h2>
+        <h2>学号: <input class="input" type=text placeholder="学号" name="studentID" value="{$studentID}" /></h2>
+        <h2>电话: <input class="input" type=text placeholder="手机" name="phone" value="{$phone}" /></h2>
+    </form>
+</div>
 <div>
-<!-- <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
- -->
- <h1>I++ 俱乐部14届招新报名</h1>
-<!-- <br/> -->
-<!-- <h1 align=center >队长：{$name} <h1>
-
-<form id="group_info" action="./groupmodify.php" method=post>
-<h5 align=center >队员一：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID1" value="{$studentID1}" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name1" value="{$name1}" /></h5>
-<h5 align=center >队员二：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID2" value="{$studentID2}" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name2" value="{$name2}" /></h5>
-<h5 align=center >队员三：<br/><br/>学号：<input type=text class=input placeholder="学号" name="studentID3" value="{$studentID3}" />&nbsp;&nbsp;姓名：<input type=text class=input placeholder="姓名" name="name3" value="{$name3}" /></h5>
-</form>
- -->
-<form id="modify_info" action="./infoModify.php" method=post>
-<h2>学号：<input class="input" type=text placeholder="学号" name="studentID" value="{$studentID}" /></h2>
-<h2>姓名：<input class="input" type=text placeholder="姓名" name="name" value="{$name}" /></h2>
-<h2>手机：<input class="input" type=text placeholder="手机" name="phone" value="{$phone}" /></h2>
-</form>
-
-<a href="#" onclick="modify()" class="btn btn-primary btn-lg">修改</a>
-
+    <button href="#" onclick="modify()" class="modify_btn btn btn-primary btn-lg">修改信息</button>
 </div>
 
 </body>
