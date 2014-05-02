@@ -19,7 +19,7 @@ margin: 0px auto;
 .header {
     position: fixed;
     left: 39%;
-    top: 7%;
+    top: 12%;
 }
 #register_form{
     display: none;
@@ -48,18 +48,9 @@ margin: 0px auto;
     margin-top: 3%;
     padding: 28px;
     /*top: 5%;*/
-    background: url(../resources/TempBgm.jpg) no-repeat ;
+    background: url(../resources/TempBgm.jpg) no-repeat;
 }
-.inputframe {
-    /*border-radius: 10px;
-    height:40px;
-    width:240px;
-    line-height:30px;
-    border-right:none;
-    margin: 0.5%;
-    vertical-align:middle;*/
-    /*border:1px solid #CCC;*/
-}
+
 input{
     outline: none;
     border-radius: 10px;

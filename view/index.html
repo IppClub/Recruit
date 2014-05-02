@@ -21,9 +21,8 @@ $(document).ready(function(){
 	$("#headtitle").css("display","inline");
 
 	//load buttons animation
+	$("#operatebtns").fadeOut();
 	$("#operatebtns").css("display","none");
-	$("#operatebtns").fadeIn("slow");
-	$("#operatebtns").css("display","inline");
 
 	//bgm animation
 	$("#bgm").css("display","none");
@@ -46,9 +45,20 @@ function backChocie(){
 	$("#login_choice").fadeIn();
 	$("#register_choice").fadeIn();
 	$("#register_form").slideUp();
+	$("#operatebtns").css("display","none");
+	
+	$("#welcome_label").fadeIn();
+	$("#welcome_label").css("display","inline");
+
 }
 
 function displayLoginSection(){
+	$("#operatebtns").css("display","none");
+	$("#operatebtns").fadeIn("slow");
+	$("#operatebtns").css("display","inline");
+
+	$("#welcome_label").css("display","none");
+
 	$("#register_form").css("display","none");
 	$("#register_form").slideDown("slow");
 	$("#register_form").css("display","inline");
@@ -57,10 +67,15 @@ function displayLoginSection(){
 	$("#login_choice").fadeOut();
 	$("#register_choice").fadeOut();
 	choice = 0;
-	alert(choice);
 }
 
+
 function displayRegisterSection(){
+	$("#operatebtns").css("display","none");
+	$("#operatebtns").fadeIn("slow");
+	$("#operatebtns").css("display","inline");
+
+	$("#welcome_label").css("display","none");
 	$("#register_form").css("display","none");
 	$("#register_form").slideDown();
 	$("#registerSection").slideDown();
@@ -69,7 +84,6 @@ function displayRegisterSection(){
 	$("#register_choice").fadeOut();
 	$("#login_choice").fadeOut();
 	choice = 1;
-	alert(choice);
 }
 
 
@@ -94,7 +108,7 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 	font-size: 20px;
 	width: 44%;
 	left:38%;
-	top:40%;
+	top:85%;
 	font-family: "Microsoft Yahei";
 }
 #login_choice{
@@ -103,7 +117,16 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 #register_choice{
 	margin-right: 5%;
 }
-
+#welcome_label{
+	position: fixed;
+	top: 20%;
+	left: 0%;
+	/*right: 2%;*/
+	width: 100%;
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
 
 </style>
 </head>
@@ -111,39 +134,39 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 <body>
 
 <div id="alert_danger" class="alert alert-danger"></div>
-<div id="bgm" name="formDiv" class="bgImage">
+<div id="bgm" name="formDiv" class="bg_image">
 	<div id="headtitle" class="header">
 		<h1>I++ Club 2014招新</h1>
 	</div>
-
+	<div id="welcome_label" class="jumbotron" >
+		  <h1>我协是厉害啊</h1>
+	</div>
 	<div id="choice" class="choice">
 		
-		<button class="btn btn-default btn-lg " id="register_choice" onclick="displayRegisterSection()">报名加入I++</button>
+		<button class="btn btn-primary btn-lg " id="register_choice" onclick="displayRegisterSection()">报名加入I++</button>
 		<button class="btn btn-default btn-lg " id="login_choice" onclick="displayLoginSection()">已有账号登陆</button>
-		
-
 	</div>
 
 	<div id="register_form" class="register_form">
 		<form id="register" action="../controller/register.php" method="post" >
 		<div id="loginSection">
 			<h2>姓名&nbsp;&nbsp;
-			<input type=text class="inputframe" placeholder=" 王尼玛" id="name" name="name" onfocus="hideAlert()"/></h2>
+			<input type=text placeholder=" 王尼玛" id="name" name="name" onfocus="hideAlert()"/></h2>
 			<h2>密码&nbsp;&nbsp;
-			<input type=password class="inputframe" placeholder=" ******" id="pwd" name="pwd" onfocus="hideAlert()"/></h2>
+			<input type=password placeholder=" ******" id="pwd" name="pwd" onfocus="hideAlert()"/></h2>
 		</div>
 		<div id="registerSection">
 			<h2>学号&nbsp;&nbsp;
-			<input type=text class="inputframe" placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
+			<input type=text placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
 			<h2>手机&nbsp;&nbsp;
-			<input type=text class="inputframe" placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
+			<input type=text placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
 		</div>
 		</form>
 	</div>
 </div>
 <div id="operatebtns">
-	<a id="registerbtn" href="#" onclick="backChocie()" class="operatebtns btn btn-primary btn-lg">返回</a>
-	<a id="loginbtn" class="operatebtns btn btn-default btn-lg">继续</a>
+	<a id="loginbtn" class="operatebtns btn btn-primary btn-lg">继续</a>
+	<a id="registerbtn" href="#" class="operatebtns btn btn-default btn-lg" onclick="backChocie()">返回</a>
 </div>
 </body>
 </html>
