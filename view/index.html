@@ -9,88 +9,8 @@
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.js"></script>
 <script type="text/javascript" src="./js/formChecker.js"></script>
+<script type="text/javascript" src="./js/actions.js"></script>
 
-
-<script type="text/javascript">
-var choice = 1;//0 for login, 1 for register
-
-$(document).ready(function(){
-	//load title animation
-	$("#headtitle").css("display","none");
-	$("#headtitle").fadeIn("slow");
-	$("#headtitle").css("display","inline");
-
-	//load buttons animation
-	$("#operatebtns").fadeOut();
-	$("#operatebtns").css("display","none");
-
-	//bgm animation
-	$("#bgm").css("display","none");
-	$("#bgm").fadeIn("slow");
-	$("#bgm").css("display","inline");
-});
-
-
-
-function hover(id,action){
-	obj=document.getElementById(id);
-	obj.src="./resources/"+action+"hover.png";
-}
-function leave(id,action){
-	obj=document.getElementById(id);
-	obj.src="./resources/"+action+".png";
-}
-
-function backChocie(){
-	$("#login_choice").fadeIn();
-	$("#register_choice").fadeIn();
-	$("#register_form").slideUp();
-	$("#operatebtns").css("display","none");
-	
-	$("#welcome_label").fadeIn();
-	$("#welcome_label").css("display","inline");
-
-}
-
-function displayLoginSection(){
-	$("#operatebtns").css("display","none");
-	$("#operatebtns").fadeIn("slow");
-	$("#operatebtns").css("display","inline");
-
-	$("#welcome_label").css("display","none");
-
-	$("#register_form").css("display","none");
-	$("#register_form").slideDown("slow");
-	$("#register_form").css("display","inline");
-	$("#registerSection").slideUp("slow");
-
-	$("#login_choice").fadeOut();
-	$("#register_choice").fadeOut();
-	choice = 0;
-}
-
-
-function displayRegisterSection(){
-	$("#operatebtns").css("display","none");
-	$("#operatebtns").fadeIn("slow");
-	$("#operatebtns").css("display","inline");
-
-	$("#welcome_label").css("display","none");
-	$("#register_form").css("display","none");
-	$("#register_form").slideDown();
-	$("#registerSection").slideDown();
-	$("#register_form").css("display","inline");
-
-	$("#register_choice").fadeOut();
-	$("#login_choice").fadeOut();
-	choice = 1;
-}
-
-
-function hideAlert(){
-	document.getElementById("alert_danger").style.display="none";
-}
-</script>
 <link rel="stylesheet" type="text/css" href="./css/style.css"/>
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
@@ -103,43 +23,23 @@ h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
 
 
-.choice{
-	position: fixed;
-	font-size: 20px;
-	width: 44%;
-	left:38%;
-	top:85%;
-	font-family: "Microsoft Yahei";
-}
-#login_choice{
-	margin-left: 5%;
-}
-#register_choice{
-	margin-right: 5%;
-}
-#welcome_label{
-	position: fixed;
-	top: 20%;
-	left: 0%;
-	/*right: 2%;*/
-	width: 100%;
-	text-align: center;
-	margin-top: 5%;
-	margin-bottom: 5%;
-}
-
 </style>
+<script type="text/javascript">
+
+</script>
+
+
 </head>
 
 <body>
-
-<div id="alert_danger" class="alert alert-danger"></div>
-<div id="bgm" name="formDiv" class="bg_image">
+<div id="bgm" name="form_div" class="main_frame bg_image">
+</div>
+<div id="main_frame" class="main_frame">
 	<div id="headtitle" class="header">
 		<h1>I++ Club 2014招新</h1>
 	</div>
 	<div id="welcome_label" class="jumbotron" >
-		  <h1>我协是厉害啊</h1>
+		  <h1>他们好厉害我好菜啊</h1>
 	</div>
 	<div id="choice" class="choice">
 		
@@ -148,7 +48,7 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 	</div>
 
 	<div id="register_form" class="register_form">
-		<form id="register" action="../controller/register.php" method="post" >
+		<!-- <form id="register" action="../controller/register.php" method="post" > -->
 		<div id="loginSection">
 			<h2>姓名&nbsp;&nbsp;
 			<input type=text placeholder=" 王尼玛" id="name" name="name" onfocus="hideAlert()"/></h2>
@@ -161,11 +61,13 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 			<h2>手机&nbsp;&nbsp;
 			<input type=text placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
 		</div>
-		</form>
+		<input id="alert_danger" class="alert alert-danger" readonly="readonly"></input>
+
+		<!-- </form> -->
 	</div>
 </div>
 <div id="operatebtns">
-	<a id="loginbtn" class="operatebtns btn btn-primary btn-lg">继续</a>
+	<a id="loginbtn" class="operatebtns btn btn-primary btn-lg" onclick="continueStep()">继续</a>
 	<a id="registerbtn" href="#" class="operatebtns btn btn-default btn-lg" onclick="backChocie()">返回</a>
 </div>
 </body>

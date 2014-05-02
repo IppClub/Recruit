@@ -1,20 +1,5 @@
 body {background:#e8e8e8;}
 a {star:expression(this.onFocus=this.blur());}
-/*.wrapper{
-background:#E8E8E8;
-height:600px;
-display: block;
-font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
-color:#29A0F9;
-text-align: center;
-font-size: 15px;
-line-height: 50%;
-box-shadow: 0 0 0px #011331;
-border-radius: 5px;
-padding: 10px;
-overflow: hidden;
-margin: 0px auto;
-}*/
 
 .header {
     position: fixed;
@@ -25,10 +10,7 @@ margin: 0px auto;
     display: none;
 }
 #register_form{
-/*  -webkit-filter: blur(0px);
-       -moz-filter: blur(0px);
-        -ms-filter: blur(0px);    
-            filter: blur(0px);  */
+    
     position: fixed;
     left:38%;
     width: 70%;
@@ -36,19 +18,21 @@ margin: 0px auto;
     /*text-align:center;*/
 }
 
-/*.blur {  -webkit-filter: blur(5px);
-       -moz-filter: blur(5px);
-        -ms-filter: blur(5px);    
-            filter: blur(5px);   }*/
-.bg_image{
-       
+.main_frame{
     position: fixed;
     height: 70%;
     width: 100%;
     margin-top: 3%;
     padding: 28px;
     /*top: 5%;*/
+}
+.bg_image{
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -ms-filter: blur(3px);    
+        filter: blur(3px); 
     background: url(../resources/TempBgm.jpg) no-repeat;
+    
 }
 
 input{
@@ -72,10 +56,15 @@ input{
 #alert_danger{display:none;}
 /*#max{background: #E8E8E8}*/
 #alert_danger{
+    font-family: "Microsoft Yahei";
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid ;
     position: fixed;
-    top:0%;
-    right: 25%;
-    width: 20%;
+    top: 29%;
+    left: 63%;
+    width: 16%;
+    border-radius: 10px;
 }
 .login_form{
     position: fixed;
@@ -86,8 +75,7 @@ input{
 }
 .operatebtns{
     position: fixed;
-
-    font-family: "微软雅黑";
+    font-family: "Microsoft Yahei";
     font-weight: bold;
     text-align: center;
     /*margin-top:4%;*/
@@ -104,4 +92,28 @@ input{
 #loginbtn{
     left:38%;
     margin-left: 15%;
+}
+.choice{
+    position: fixed;
+    font-size: 20px;
+    width: 44%;
+    left:38%;
+    top:85%;
+    font-family: "Microsoft Yahei";
+}
+#login_choice{
+    margin-left: 5%;
+}
+#register_choice{
+    margin-right: 5%;
+}
+#welcome_label{
+    position: fixed;
+    top: 20%;
+    left: 0%;
+    /*right: 2%;*/
+    width: 100%;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }

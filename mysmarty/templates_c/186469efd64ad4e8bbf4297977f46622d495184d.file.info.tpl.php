@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-01 08:13:51
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 11:14:09
          compiled from "..\mysmarty\templates\info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12395518a5d508b4f05-09048999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '186469efd64ad4e8bbf4297977f46622d495184d' => 
     array (
       0 => '..\\mysmarty\\templates\\info.tpl',
-      1 => 1398924766,
+      1 => 1398953326,
       2 => 'file',
     ),
   ),
@@ -38,9 +38,9 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/style.css">
 
 <body  id="max" >
