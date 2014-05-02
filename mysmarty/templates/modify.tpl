@@ -27,6 +27,7 @@ function modify(){
 <link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome-ie7.min.css"/>
 <link rel="stylesheet" type="text/css" href="../../view/css/style.css">
+<script type="text/javascript" src="../../view/js/formChecker.js"></script>
 
 <style text="text/css">
 h1{

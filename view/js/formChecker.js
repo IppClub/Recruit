@@ -1,5 +1,8 @@
 var choice = 1;
 
+function redirect() {
+    window.location.href="../../index.html";
+}
 
 function valideForm(name, pwd, id, phone)
 {

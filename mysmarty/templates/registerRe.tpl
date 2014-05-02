@@ -15,22 +15,25 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 
-<body id="max">
+<script type="text/javascript">
 
-<div class=wrapper>
+</script>
 
-<br/>
-<br/>
-<h1 align=center>I++ 俱乐部14届招新报名</h1>
-<br/>
-<br/>
-<h1 align=center ><font color=red>{$info}</font><h1>
-<br/>
-<h1 align=center >学号：{$ID} <h1>
-<h1 align=center >姓名：{$name} <h1>
-<h1 align=center >电话：{$phone} <h1>
+<body>
 
-<a href="../../index.html"  class="operatebtns button button-circle button-flat-primary">返回首页</a>
+
+<div class="header">
+    <h1>I++ 俱乐部14届招新报名</h1>
+</div>
+
+<div class="main_frame">
+    <h1 >{$info}<h1>
+    <h1 >学号：{$ID} <h1>
+    <h1 >姓名：{$name} <h1>
+    <h1 >电话：{$phone} <h1>
+</div>
+<div>
+    <button class="modify_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
 </div>
 
 </body>

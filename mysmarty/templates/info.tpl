@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
-I++ 报名结结果
+I++ 报名结果
 </title>
 
 <style type="text/css">
@@ -17,7 +17,7 @@ h2{
     position: fixed;
     top: 26%;
     width: 70%;
-    left: 37%;
+    left: 39%;
     height: 60%;
 }
 .info_btn{
@@ -30,7 +30,10 @@ h2{
     font-size: 30px;
 }
 </style>
+<script type="text/javascript" src="../../view/js/formChecker.js"></script>
 </head>
+
+
 <link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.css"/>
@@ -50,7 +53,7 @@ h2{
 </div>
 
 <div id="info_btn">
-    <button href="../../index.html" class="info_btn btn btn-primary btn-lg">回到首页</button>
+    <button onclick="redirect()" class="info_btn btn btn-primary btn-lg">回到首页</button>
 </div>
 
 </body>
