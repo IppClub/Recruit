@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-01 08:19:05
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 15:33:56
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210875361e222c55029-73528568%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1398925111,
+      1 => 1398947688,
       2 => 'file',
     ),
   ),
@@ -34,16 +34,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 I++ 俱乐部14届招新报名
 </title>
 </head>
+<link rel="stylesheet" type="text/css" href="../view/css/style.css">
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/style.css">
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 
-<body  id="max" >
+<body id="max">
 
 <div class=wrapper>
 
@@ -54,7 +54,6 @@ I++ 俱乐部14届招新报名
 <br/>
 <h1 align=center ><font color=red><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
 </font><h1>
-<br/>
 <br/>
 <h1 align=center >学号：<?php echo $_smarty_tpl->tpl_vars['ID']->value;?>
  <h1>

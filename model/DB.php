@@ -4,7 +4,7 @@ class DB
 	public  $con;
 	function connect()
 	{
-		$this->con=mysql_connect("localhost","root","");
+		$this->con=mysql_connect("localhost","root","root");
 		if (!$this->con)
 		{		
 			die('Could not connect: ' . mysql_error());

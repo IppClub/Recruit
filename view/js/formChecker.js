@@ -52,35 +52,56 @@ function showAlertMesg(cases){
 }
 
 function continueStep(){
-    var name = $("#name").val();
-    var pwd = $("#pwd").val();
-    var studentID = $("#studentID").val();
-    var phone = $("#phone").val();
-    var rawdata = { "name":name, "pwd":pwd, "studentID":studentID, "phone":phone };
-    if (true == valideForm(name, pwd, studentID, phone)) {
-        // $.post("../controller/register.php", rawdata).success(function(){
-        //     alert("正在递交您的内容："+name + " " + pwd + " " + studentID + " " + phone);
+    var uname = $("#name").val();
+    var upwd = $("#pwd").val();
+    var ustudentID = $("#studentID").val();
+    var uphone = $("#phone").val();
+    // var rawdata = ;
+    // rawdata = rawdata.serialize();
+    if (true == valideForm(uname, upwd, ustudentID, uphone)) {
+        $("#register").submit();
+        // $.post("../controller/register.php",
+        // {
+        // 	"name":uname,
+        // 	"pwd":upwd,
+        // 	"studentID":ustudentID,
+        // 	"phone":uphone
+        // },
+        // function(ret){
+        // 	if(ret=="pass") {
+        //     	alert("正在递交您的内容："+name + " " + pwd + " " + studentID + " " + phone);
+        // 	}
+        // 	else if(ret=="wname"){
+        // 		alert("wname");
+        // 	}
+        // 	else if(ret=="wphone"){
+        // 		alert("wphone");
+        // 	}
+        // 	else if(ret=="wpwd"){
+        // 		alert("wpwd");
+        // 	}
+        // 	else if(ret=="wstudentID"){
+        // 		alert("wstudentID");
+        // 	}
         // });
-
-        $.ajax({
-		    type: 'POST',
-		    url: '../controller/register.php',
-		    data: rawdata,
-		    dataType:'json',
-		    contentType:"application/json;charset=utf-8", 
-		    success: function(data) {
-		    	alert("YEAH!");
-		        // $("#result").html(JSON.parse(data));
-		       },    
-		    error: function(XMLHttpRequest, textStatus, errorThrown) { 
-		        // $("#result").html("failed content: " + $str['id']+" " + $str['cat'] + " " + $str['price'] + " " + $str['num'] + "<br>failed reason: " + textStatus+" " + errorThrown + "<br/>" + XMLHttpRequest.responseText);
-		         
-	        //alert("error " + XMLHttpRequest.responseText);
-	        	alert(JSON.parse(rawdata));
-	        }       
-	    });
+        
+     //    $.ajax({
+		   //  type: 'POST',
+		   //  url: '../controller/register.php',
+		   //  data: rawdata,
+		   //  dataType:'json',
+		   //  contentType:"application/json;charset=utf-8", 
+		   //  success: function(data) {
+		   //  	alert("success");
+		   //      // $("#result").html(JQuery.parseJSON(data));
+		   //     },    
+		   //  error: function(XMLHttpRequest, textStatus, errorThrown) { 
+		   //       alert("textStatus: " + textStatus);
+		   //       alert("errorThrown: " + errorThrown);
+	    //     }       
+	    // });
 
     } else {
-    	alert("总之好像出了些什么问题");
+    	// alert("总之好像出了些什么问题");
     }
 }
