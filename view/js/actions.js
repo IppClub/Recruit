@@ -68,15 +68,3 @@ function hideAlert(){
     document.getElementById("alert_danger").style.display = "none";
 }
 
-function continueStep(){
-    var name = $("#name").val();
-    var pwd = $("#pwd").val();
-    var studentID = $("#studentID").val();
-    var phone = $("#phone").val();
-    var data = { "name":name, "pwd":pwd, "studentID":studentID, "phone":phone };
-    if (true == valideForm(name, pwd, studentID, phone)) {
-        $.post("../controller/register.php", data).success(function(){
-            alert(name + " " + pwd + " " + schoolId + " " + phone);
-        });
-    }
-}
