@@ -6,14 +6,29 @@
 <title>
 I++ 俱乐部14届招新报名
 </title>
-<script>
-function hover()
-{
+<script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./js/bootstrap.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    // alert("cao");
+    $("#headtitle").css("display","none");
+    $("#headtitle").slideDown("slow");
+    $("#headtitle").css("display","inline");
+
+    $("#login_form").css("display","none");
+    $("#login_form").slideDown("slow");
+    $("#login_form").css("display","inline");
+});
+
+
+
+function hover(){
 	obj=document.getElementById("button");
 	obj.src="./resources/loginhover.png";
 }
-function leave()
-{
+function leave(){
 	obj=document.getElementById("button");
 	obj.src="./resources/login.png";
 }
@@ -21,7 +36,7 @@ function submit(){
 	document.getElementById("login_info").submit();
 }
 </script>
-
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
@@ -30,59 +45,31 @@ function submit(){
 <link rel="stylesheet" type="text/css" href="Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="Buttons/css/font-awesome-ie7.min.css"/>
 <style type="text/css">
-body {background:#e8e8e8;text-align: center;}
-.wrapper{
-background:#E8E8E8;
-height:600px;
-display: block;
-font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
-color: #29A0F9;
-text-align: center;
-font-size: 15px;
-line-height: 100%;
-box-shadow: 0 0 0px #011331;
-border-radius: 5px;
-padding: 10px;
-overflow: hidden;
-margin: 0px auto;
-}
-h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}
-h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}
-.form_register{text-align:center;}
-#button{text-align:left;}
-.form{margin-left:36%;}
-.input {height:40px; line-height:30px;border-right:none; width:180px;;border:1px solid #CCC;vertical-align:middle;}
-#max{background: #E8E8E8}
+
 </style>
 </head>
-<body id="max"  >
-<div class=wrapper>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h1 align=center>I++ 俱乐部14届招新报名</h1>
-<br/>
-<br/>
-<div class="form_register">
+<body>
 
-<form id="login_info" action="../controller/login.php" method=post>
-<div class="form">
-<h2>学号:
-<input type=text class=input placeholder="学号" name="studentID"/><br/></h2>
-<h2>密码:
-<input type=password class=input placeholder="请输入密码" name="pwd"/></h2>
+
+<div id="bgm" name="formDiv">
+    <div id="headtitle">
+        <h1 align=center>I++ Club 报名信息</h1>
+    </div>
+    <div id="login_form" class="login_form">
+
+        <div class="register_form">
+            <h2>学号:
+            <input type=text class=input placeholder="学号" name="studentID"/><br/></h2>
+            <h2>密码:
+            <input type=password class=input placeholder="请输入密码" name="pwd"/></h2>
+        </div>
+
+        <!-- <br/><br/><br/><br/> -->
+        <a href="#" onclick="submit()" class="loginbtn btn btn-primary btn-lg">登陆</a>
+            <!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+        <!-- </form> -->
+    </div>
 </div>
-
-<br/><br/><br/><br/>
-<a href="#" onclick="submit()" class="button button-circle button-flat-primary">登陆</a><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-</form>
-
-
-
-</div>
-</div>
+<!-- </div> -->
 </body>
 </html>

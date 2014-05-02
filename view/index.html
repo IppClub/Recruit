@@ -12,17 +12,72 @@
 
 
 <script type="text/javascript">
-// function hover(id,action)
-// {
-// 	obj=document.getElementById(id);
-// 	obj.src="./resources/"+action+"hover.png";
-// }function leave(id,action)
-// {
-// 	obj=document.getElementById(id);
-// 	obj.src="./resources/"+action+".png";
-// }
-</script>
+$(document).ready(function(){
+	//load title animation
+	$("#headtitle").css("display","none");
+	$("#headtitle").fadeIn("slow");
+	$("#headtitle").css("display","inline");
 
+	//load text input slide animation
+	$("#registerForm").css("display","none");
+	$("#registerForm").slideDown("slow");
+	// $("#registerForm").animate({
+		// left:	
+	// })
+	$("#registerForm").css("display","inline");
+
+	//load buttons animation
+	$("#operatebtns").css("display","none");
+	$("#operatebtns").fadeIn("slow");
+	$("#operatebtns").css("display","inline");
+
+	//bgm animation
+	$("#bgm").css("display","none");
+	$("#bgm").fadeIn("slow");
+	$("#bgm").css("display","inline");
+
+	//switch page
+	$("#loginbtn").click(function(){
+		$("#bgm").slideUp("slow");
+		$("#headtitle").fadeOut("slow");
+		$("#operatebtns").fadeOut("slow",function(){
+			window.location.href = "./login.html";
+			
+		});
+
+	})
+
+});
+
+
+
+function hover(id,action){
+	obj=document.getElementById(id);
+	obj.src="./resources/"+action+"hover.png";
+}
+function leave(id,action){
+	obj=document.getElementById(id);
+	obj.src="./resources/"+action+".png";
+}
+
+// function handInRegister(){
+// 	//judge input and post form
+// 	obj=document.getElementById("studentID");
+// 	// here should be fixed
+// 	// the range of the studentId is not correct
+// 	if(obj.value<71113000 || obj.value>71113500)
+// 	{
+// 		document.getElementById("alert_danger").style.display="block";
+// 	}
+// 	else
+// 		document.getElementById("register").submit();
+// }
+// function hideAlert(){
+// 	// blur();
+// 	document.getElementById("alert_danger").style.display="none";
+}
+</script>
+<link rel="stylesheet" type="text/css" href="./css/style.css"/>
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css"/>
@@ -30,132 +85,40 @@
 <link rel="stylesheet" type="text/css" href="./Buttons/css/buttons.css"/>
 <link rel="stylesheet" type="text/css" href="./Buttons/css/font-awesome.min.css"/>
 <style type="text/css">
-
-body {background:#e8e8e8;text-align: center;}
-a {star:expression(this.onFocus=this.blur());}
-/*.wrapper{
-background:#E8E8E8;
-height:600px;
-display: block;
-font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
-color:#29A0F9;
-text-align: center;
-font-size: 15px;
-line-height: 50%;
-box-shadow: 0 0 0px #011331;
-border-radius: 5px;
-padding: 10px;
-overflow: hidden;
-margin: 0px auto;
-}*/
 h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
 h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: white;}
 
-.header {
-	margin-top: 2%;
-}
-.register_form{
-/*	-webkit-filter: blur(0px);
-       -moz-filter: blur(0px);
-        -ms-filter: blur(0px);    
-            filter: blur(0px);  */
-	/*margin-left:0%;*/
-    margin-top:5%;
-	text-align:center;
-}
-
-.blur {    
-}
-.bgImage{
-/*    -webkit-filter: blur(5px);
-       -moz-filter: blur(5px);
-        -ms-filter: blur(5px);    
-            filter: blur(5px);    
-*/	height: 500px;
-	width: 100%;
-	margin-top: 3%;
-	padding: 28px;
-	/*top: 5%;*/
-	background: url(./resources/TempBgm.jpg) no-repeat -50px -230px;
-}
-.input {
-	height:40px;
-	line-height:30px;
-	border-right:none;
-	width:20%;
-	margin: 0.5%;
-	border:1px solid #CCC;
-	vertical-align:middle;
-}
-#button{
-	text-align:left;
-}
-#login{
-	text-align:left;
-	decoration:none;
-	border:0px;
-}
-#alert_danger{display:none;}
-/*#max{background: #E8E8E8}*/
-#alert_danger{
-	position: absolute;
-	top:5px;
-	left: 30px;
-	width: 1300px;
-}
-.operatebtns{
-	font-family: "微软雅黑";
-	font-weight: bold;
-	text-align: center;
-	margin-top: 2%;
-	width: 10%;
-	height: 5%;
-	font-size: 20px;
-}
-#registerbtn{
-	margin-right: 2%;
-}
-#loginbtn{
-	margin-left: 2%;
-}
 
 </style>
 </head>
 
-<!-- what does the fuck id 'max' mean?
-who write this comment?! shit..! -->
 <body>
 
 <div id="alert_danger" class="alert alert-danger"></div>
-<div name="formDiv" class="bgImage ">
-<div class="header">
-	<h1 >I++ 俱乐部14届招新报名</h1>
-</div>
-	<div class="register_form  ">
-	<form id="register" action="../controller/register.php" method="post" onsubmit="return check()">
-		<h2>学号&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="71113****" id="studentID" name="studentID" 
-		onfocus="hideAlert(this.id)"/><br/></h2>
-		<h2>姓名&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="王尼玛" id="name" name="name" onfocus="hideAlert(this.id)"/></h2>
-		<h2>手机&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="18XXXXXXX" id="phone" name="phone" onfocus="hideAlert(this.id)"/></h2>
-		<h2>密码&nbsp;&nbsp;&nbsp;
-		<input type=password class="input" placeholder="******" id="pwd" name="pwd" onfocus="hideAlert(this.id)"/></h2>
-	</form>
+<div id="bgm" name="formDiv" class="bgImage">
+	<div id="headtitle" class="header">
+		<h1>I++ Club 2014招新</h1>
 	</div>
-	<!-- </div> -->
+	<div id="registerForm" class="registerForm">
+		<form id="register" action="../controller/register.php" method="post" >
+		<div id="loginSection">
+			<h2>姓名&nbsp;&nbsp;
+			<input type=text class="inputframe" placeholder=" 王尼玛" id="name" name="name" onfocus="hideAlert()"/></h2>
+			<h2>密码&nbsp;&nbsp;
+			<input type=password class="inputframe" placeholder=" ******" id="pwd" name="pwd" onfocus="hideAlert()"/></h2>
+		</div id="registerSection">
+		<div>
+			<h2>学号&nbsp;&nbsp;
+			<input type=text class="inputframe" placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
+			<h2>手机&nbsp;&nbsp;
+			<input type=text class="inputframe" placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
+		</div>
+		</form>
+	</div>
 </div>
 <div id="operatebtns">
 	<a id="registerbtn" href="#" onclick="handInRegister()" class="operatebtns btn btn-primary btn-lg">报名注册</a>
-	<a id="loginbtn" href="./login.html" class="operatebtns btn btn-default btn-lg">登陆查看</a>
+	<a id="loginbtn"  class="operatebtns btn btn-default btn-lg">登陆查看</a>
 </div>
-
 </body>
 </html>
-<!-- <br/><br/><br/><br/> -->
-<!-- <button type="button" class="btn btn-primary btn-lg">Large button</button> -->
-	<!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
-<!-- <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
-
-<!-- </div> -->

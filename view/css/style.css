@@ -1,25 +1,116 @@
-.body {background:#e8e8e8;text-align: center;}
-.wrapper{
-background: #E8E8E8;
+body {background:#e8e8e8;}
+a {star:expression(this.onFocus=this.blur());}
+/*.wrapper{
+background:#E8E8E8;
 height:600px;
 display: block;
 font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;
-color: #29A0F9;
+color:#29A0F9;
 text-align: center;
 font-size: 15px;
-line-height: 100%;
+line-height: 50%;
 box-shadow: 0 0 0px #011331;
 border-radius: 5px;
 padding: 10px;
 overflow: hidden;
-margin: 10px auto;
-border:0px;
+margin: 0px auto;
+}*/
+
+.header {
+    position: fixed;
+    left: 39%;
+    top: 7%;
 }
-/*h1{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}*/
-/*h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;text-align:left}*/
-/*h5{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif;}*/
-/*.form_register{text-align:center;}*/
-#button{text-align:left;}
-#max{background: #E8E8E8;}
-.form{margin-left:36%;}
-.input {height:30px; line-height:30px;border-right:none; width:150px;;border:1px solid #CCC;vertical-align:middle;}
+#registerForm{
+    display: none;
+}
+#registerForm{
+/*  -webkit-filter: blur(0px);
+       -moz-filter: blur(0px);
+        -ms-filter: blur(0px);    
+            filter: blur(0px);  */
+    position: fixed;
+    left:38%;
+    width: 70%;
+    margin-top:7%;
+    /*text-align:center;*/
+}
+
+/*.blur {  -webkit-filter: blur(5px);
+       -moz-filter: blur(5px);
+        -ms-filter: blur(5px);    
+            filter: blur(5px);   }*/
+.bgImage{
+       
+    position: fixed;
+    height: 70%;
+    width: 100%;
+    margin-top: 3%;
+    padding: 28px;
+    /*top: 5%;*/
+    background: url(../resources/TempBgm.jpg) no-repeat ;
+}
+.inputframe {
+    /*border-radius: 10px;
+    height:40px;
+    width:240px;
+    line-height:30px;
+    border-right:none;
+    margin: 0.5%;
+    vertical-align:middle;*/
+    /*border:1px solid #CCC;*/
+}
+input{
+    outline: none;
+    border-radius: 10px;
+    height:40px;
+    width:240px;
+    line-height:30px;
+    border-right:none;
+    margin: 0.5%;
+    vertical-align:middle;
+}
+#button{
+    text-align:left;
+}
+#login{
+    text-align:left;
+    decoration:none;
+    border:0px;
+}
+#alert_danger{display:none;}
+/*#max{background: #E8E8E8}*/
+#alert_danger{
+    position: fixed;
+    top:0%;
+    right: 25%;
+    width: 20%;
+}
+.login_form{
+    position: fixed;
+    top: 30%;
+    left: 39%;
+    width: 100%;
+    height: 80%;
+}
+.operatebtns{
+    position: fixed;
+
+    font-family: "微软雅黑";
+    font-weight: bold;
+    text-align: center;
+    /*margin-top:4%;*/
+    margin-top: 40%;
+    width: 10%;
+    height: 7%;
+    font-size: 20px;
+}
+#registerbtn{
+    /*position: fixed;*/
+    left:38%;
+    margin-right: 5%;
+}
+#loginbtn{
+    right:38%;
+    margin-left: 5%;
+}
