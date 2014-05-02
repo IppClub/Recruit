@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <title>
@@ -8,6 +8,7 @@
 <script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/formChecker.js"></script>
 
 
 <script type="text/javascript">
@@ -103,13 +104,14 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 	margin-right: 5%;
 }
 
+
 </style>
 </head>
 
 <body>
 
-<div id="alert_danger" class="alert alert-danger"> 账号输入错误 </div>
-<div id="bgm" name="from_div" class="bg_image">
+<div id="alert_danger" class="alert alert-danger"></div>
+<div id="bgm" name="formDiv" class="bgImage">
 	<div id="headtitle" class="header">
 		<h1>I++ Club 2014招新</h1>
 	</div>
@@ -126,15 +128,15 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 		<form id="register" action="../controller/register.php" method="post" >
 		<div id="loginSection">
 			<h2>姓名&nbsp;&nbsp;
-			<input type=text class="inputframe" placeholder=" 王尼玛" name="name" onfocus="hideAlert()"/></h2>
+			<input type=text class="inputframe" placeholder=" 王尼玛" id="name" name="name" onfocus="hideAlert()"/></h2>
 			<h2>密码&nbsp;&nbsp;
-			<input type=password class="inputframe" placeholder=" ******" name="pwd" onfocus="hideAlert()"/></h2>
+			<input type=password class="inputframe" placeholder=" ******" id="pwd" name="pwd" onfocus="hideAlert()"/></h2>
 		</div>
 		<div id="registerSection">
 			<h2>学号&nbsp;&nbsp;
 			<input type=text class="inputframe" placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
 			<h2>手机&nbsp;&nbsp;
-			<input type=text class="inputframe" placeholder=" 18XXXXXXX" name="phone" onfocus="hideAlert()"/></h2>
+			<input type=text class="inputframe" placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
 		</div>
 		</form>
 	</div>
