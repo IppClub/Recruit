@@ -28,7 +28,6 @@ function backChocie(){
     $("#operatebtns").css("display","none");
     
     $("#welcome_label").fadeIn().css("display","inline");
-
 }
 
 function displayLoginSection(){

@@ -11,7 +11,7 @@ class DB
 		}
 		
 		mysql_query("set names utf8",$this->con); 
-		mysql_select_db("ippclub", $this->con);
+		mysql_select_db("ipp", $this->con);
 	}
 	function select_sentence($tablename,$columnname,$var)
 	{

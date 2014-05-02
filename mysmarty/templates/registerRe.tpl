@@ -30,7 +30,7 @@ I++ 俱乐部14届招新报名
 <h1 align=center >姓名：{$name} <h1>
 <h1 align=center >电话：{$phone} <h1>
 
-<a href="../view/login.html"  class="button button-circle button-flat-primary">返回首页</a>
+<a href="../../index.html"  class="operatebtns button button-circle button-flat-primary">返回首页</a>
 </div>
 
 </body>

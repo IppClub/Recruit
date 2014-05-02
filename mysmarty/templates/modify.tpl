@@ -15,30 +15,43 @@ function hover()
 	obj=document.getElementById("button");
 	obj.src="../view/modify.png";
 }
-function modify()
-{
+function modify(){
 	document.getElementById("modify_info").submit();
 }
 </script>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/Buttons\css\font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../view/style.css">
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../../view/css/style.css">
+
+<style text="text/css">
+/*.input{
+    outline: none;
+    border-radius: 10px;
+    height:40px;
+    width:240px;
+    line-height:30px;
+    border-right:none;
+    margin: 0.5%;
+    vertical-align:middle;
+}*/
+</style>
 </head>
-<body id="max">
-<div  class=wrapper>
+<body>
+<div>
+<!-- <br/>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<br/>
-<h1 align=center>I++ 俱乐部14届招新报名</h1>
-<br/>
+ -->
+ <h1>I++ 俱乐部14届招新报名</h1>
+<!-- <br/> -->
 <!-- <h1 align=center >队长：{$name} <h1>
 
 <form id="group_info" action="./groupmodify.php" method=post>
@@ -48,12 +61,12 @@ function modify()
 </form>
  -->
 <form id="modify_info" action="./infoModify.php" method=post>
-<h5 align=center >学号：<input type=text class=input placeholder="学号" name="studentID" value="{$studentID}" /></h5>
-<h5 align=center >姓名：<input type=text class=input placeholder="姓名" name="name" value="{$name}" /></h5>
-<h5 align=center >手机：<input type=text class=input placeholder="手机" name="phone" value="{$phone}" /></h5>
+<h2>学号：<input class="input" type=text placeholder="学号" name="studentID" value="{$studentID}" /></h2>
+<h2>姓名：<input class="input" type=text placeholder="姓名" name="name" value="{$name}" /></h2>
+<h2>手机：<input class="input" type=text placeholder="手机" name="phone" value="{$phone}" /></h2>
 </form>
 
-<a href="#" onclick="modify()" class="button button-circle button-flat-primary">修改</a>
+<a href="#" onclick="modify()" class="btn btn-primary btn-lg">修改</a>
 
 </div>
 

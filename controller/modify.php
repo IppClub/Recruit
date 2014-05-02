@@ -3,7 +3,7 @@
 	header("Content-Type:text/html;charset=UTF-8"); 
 	session_start();
 	if(!isset($_SESSION['studentID']))
-		Header("Location:../view/login.html");
+		Header("Location:../view/index.html");
 	include("../libs/Smarty.class.php"); 
 	$smarty = new Smarty;
 	//下面的(你的网站目录)用绝对路径，可以用相对路径（./templates）

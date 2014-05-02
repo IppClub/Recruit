@@ -15,35 +15,31 @@ $controller=new DB();
 include("../libs/Smarty.class.php"); 
 $smarty = new Smarty;
 //下面的(你的网站目录)用绝对路径，可以用相对路径（./templates）
+
+//smarty configuration
 $smarty ->template_dir='../mysmarty/templates';
 $smarty->config_dir='../mysmarty/configs';
 $smarty ->cache_dir='../mysmarty/cache';
 $smarty ->compile_dir='../mysmarty/templates_c';
-	//上面四行为使用Smarty前的必要参数配置
-if(!preg_match("/[\x{4e00}-\x{9fa5}]/u", $name)){
-	$smarty->assign('info',"名字错了吧");
+//上面四行为使用Smarty前的必要参数配置
+if(!preg_match("/^(71113140)|(71113[1-4]([0-3][1-9])|([1-3]0))$/",$studentID))
+{
+	$smarty->assign('info',"学号错了吧。。");
 	$smarty->display('info.tpl');
-	// return "wname";
 }
 else if(!preg_match("/^[0-9a-zA-Z]{3,16}$/",$pwd)){
 	$smarty->assign('info',"密码写得不太对");
 	$smarty->display('info.tpl');
-	// return "wpwd";
 }
-else if(!preg_match("/^(71113140)|(71113[1-4]([0-3][1-9])|([1-3]0))$/",$studentID))
-{
-	$smarty->assign('info',"学号错了吧。。");
+else if(!preg_match("/[\x{4e00}-\x{9fa5}]/u", $name)){
+	$smarty->assign('info',"名字错了吧");
 	$smarty->display('info.tpl');
-	// return "wstudentID";
 }
 else if(!preg_match("/^\d{11}$/",$phone)){
-	$smarty->assign('info',"您绝壁填错了手机号");
+	$smarty->assign('info',"绝壁填错了手机号");
 	$smarty->display('info.tpl');
-	// return "wphone";
 }
-else
-{
-	// return "pass";
+else{
 	$row=$controller->select_sentence("student_info","studentID",$studentID);
 	if($row!=0)
 	{

@@ -35,7 +35,7 @@ a {star:expression(this.onFocus=this.blur());}
     
 }
 
-input{
+.input{
     outline: none;
     border-radius: 10px;
     height:40px;
