@@ -8,35 +8,19 @@
 <script type="text/javascript" src="./js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="./js/bootstrap.min.js"></script>
 <script type="text/javascript" src="./js/bootstrap.js"></script>
+<script type="text/javascript" src="./js/formChecker.js"></script>
 
 
 <script type="text/javascript">
-function hover(id,action)
-{
-	obj=document.getElementById(id);
-	obj.src="./resources/"+action+"hover.png";
-}function leave(id,action)
-{
-	obj=document.getElementById(id);
-	obj.src="./resources/"+action+".png";
-}
-
-function handInRegister()//判断输入&&提交表单
-{
-	obj=document.getElementById("studentID");
-	// here should be fixed
-	// the range of the studentId is not correct
-	if(obj.value<71113000 || obj.value>71113500)
-	{
-		document.getElementById("alert_danger").style.display="block";
-	}
-	else
-		document.getElementById("register").submit();
-}
-function hideAlert()
-{
-	document.getElementById("alert_danger").style.display="none";
-}
+// function hover(id,action)
+// {
+// 	obj=document.getElementById(id);
+// 	obj.src="./resources/"+action+"hover.png";
+// }function leave(id,action)
+// {
+// 	obj=document.getElementById(id);
+// 	obj.src="./resources/"+action+".png";
+// }
 </script>
 
 <link rel="stylesheet" type="text/css" href="./css/bootstrap.css"/>
@@ -142,7 +126,7 @@ h2{font-family: "微软雅黑",Verdana, Arial, Helvetica, sans-serif; color: whi
 who write this comment?! shit..! -->
 <body>
 
-<div id="alert_danger" class="alert alert-danger">账号输入错误</div>
+<div id="alert_danger" class="alert alert-danger"></div>
 <div name="formDiv" class="bgImage ">
 <div class="header">
 	<h1 >I++ 俱乐部14届招新报名</h1>
@@ -150,13 +134,14 @@ who write this comment?! shit..! -->
 	<div class="register_form  ">
 	<form id="register" action="../controller/register.php" method="post" onsubmit="return check()">
 		<h2>学号&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="71113****" id="studentID" name="studentID" onfocus="hideAlert()"/><br/></h2>
+		<input type=text class="input" placeholder="71113****" id="studentID" name="studentID" 
+		onfocus="hideAlert(this.id)"/><br/></h2>
 		<h2>姓名&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="王尼玛" name="name" onfocus="hideAlert()"/></h2>
+		<input type=text class="input" placeholder="王尼玛" id="name" name="name" onfocus="hideAlert(this.id)"/></h2>
 		<h2>手机&nbsp;&nbsp;&nbsp;
-		<input type=text class="input" placeholder="18XXXXXXX" name="phone" onfocus="hideAlert()"/></h2>
+		<input type=text class="input" placeholder="18XXXXXXX" id="phone" name="phone" onfocus="hideAlert(this.id)"/></h2>
 		<h2>密码&nbsp;&nbsp;&nbsp;
-		<input type=password class="input" placeholder="******" name="pwd" onfocus="hideAlert()"/></h2>
+		<input type=password class="input" placeholder="******" id="pwd" name="pwd" onfocus="hideAlert(this.id)"/></h2>
 	</form>
 	</div>
 	<!-- </div> -->
