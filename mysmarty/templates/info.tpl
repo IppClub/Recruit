@@ -22,9 +22,10 @@ h2{
 }
 .info_btn{
     position: fixed;
-    top: 70%;
+    margin:top: 70%;
     width: 20%;
-    left: 35%;
+    
+    /*left: 35%;*/
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;
