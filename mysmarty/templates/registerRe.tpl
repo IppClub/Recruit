@@ -6,7 +6,8 @@
 I++ 俱乐部14届招新报名
 </title>
 </head>
-<link rel="stylesheet" type="text/css" href="../view/css/style.css">
+<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
@@ -15,9 +16,7 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 
-<script type="text/javascript">
 
-</script>
 <style type="text/css">
 .info_frame{
     position: fixed;
@@ -28,10 +27,10 @@ I++ 俱乐部14届招新报名
 }
 .info_btn{
     position: fixed;
-    margin:top: 70%;
+
+    top: 70%;
     width: 20%;
-    
-    /*left: 35%;*/
+    left: 35%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

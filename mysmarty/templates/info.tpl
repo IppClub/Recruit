@@ -31,18 +31,18 @@ h2{
     font-size: 30px;
 }
 </style>
-<script type="text/javascript" src="../../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
 </head>
 
 
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/style.css">
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/style.css">
 
 <body>
 
