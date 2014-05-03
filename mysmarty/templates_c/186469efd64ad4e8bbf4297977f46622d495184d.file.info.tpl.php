@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:56:38
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 07:31:16
          compiled from "..\mysmarty\templates\info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12395518a5d508b4f05-09048999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '186469efd64ad4e8bbf4297977f46622d495184d' => 
     array (
       0 => '..\\mysmarty\\templates\\info.tpl',
-      1 => 1399042592,
+      1 => 1399094992,
       2 => 'file',
     ),
   ),
@@ -55,18 +55,18 @@ h2{
     font-size: 30px;
 }
 </style>
-<script type="text/javascript" src="../../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
 </head>
 
 
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/bootstrap-theme.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/buttons.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/Buttons/css/font-awesome-ie7.min.css"/>
-<link rel="stylesheet" type="text/css" href="../../view/css/style.css">
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
+<link rel="stylesheet" type="text/css" href="../view/css/style.css">
 
 <body>
 

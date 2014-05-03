@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-02 16:50:29
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 07:33:33
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210875361e222c55029-73528568%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1399042175,
+      1 => 1399095069,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 I++ 俱乐部14届招新报名
 </title>
 </head>
-<link rel="stylesheet" type="text/css" href="../view/css/style.css">
+<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
@@ -43,14 +44,33 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 
-<body id="max">
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
+<style type="text/css">
+.info_frame{
+    position: fixed;
+    top: 26%;
+    width: 70%;
+    left: 39%;
+    height: 60%;
+}
+.info_btn{
+    position: fixed;
+    top: 70%;
+    width: 20%;
+    left: 35%;
+    height: 10%;
+    font-family:"Microsoft Yahei";
+    font-size: 30px;
+}
+</style>
+<body>
 
 
 <div class="header">
     <h1>I++ 俱乐部14届招新报名</h1>
 </div>
 
-<div class="main_frame">
+<div class="info_frame">
     <h1 ><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
 <h1>
     <h1 >学号：<?php echo $_smarty_tpl->tpl_vars['ID']->value;?>
@@ -61,7 +81,7 @@ I++ 俱乐部14届招新报名
  <h1>
 </div>
 <div>
-    <button href="../../index.html"  class="modify_btn btn btn-primary btn-lg">返回首页</button>
+    <button class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
 </div>
 
 </body>
