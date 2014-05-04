@@ -3,7 +3,7 @@ a {star:expression(this.onFocus=this.blur());}
 
 .header {
     position: fixed;
-    left: 39%;
+    left: 43%;
     top: 12%;
 }
 #register_form{

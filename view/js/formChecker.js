@@ -6,10 +6,10 @@ function redirect() {
 
 function valideForm(name, pwd, id, phone)
 {
-	nameRe=/[\u4e00-\u9fa5]{2,4}/;
+	nameRe=/^[\u4e00-\u9fa5]{2,4}$/;
 	pwdRe=/\w{3,16}/;
-	IDre=/^(71113140)|(71113[1-4]([0-3][1-9])|([1-3]0))$/;
-	phoneRe=/^(13)|(15)|(18)\d{9}$/;
+	IDre=/^(71113140)|(71113[1-4](([0-3][1-9])|([1-3]0)))$/;
+	phoneRe=/^(13|15|18)\d{9}$/;
 	if (choice==1) {
 		if(!IDre.test(id)){
 			showAlertMesg(0);
@@ -45,23 +45,23 @@ function valideForm(name, pwd, id, phone)
 function showAlertMesg(cases){
 	switch(cases){
 		case 0:
-			$("#alert_danger").val("学号是不对啊")
+			$("#alert_danger").val("学号是你吗")
 			.animate({top:'28.5%'})
 			.css("display","inline");
 			break;
 		case 1:
 			$("#alert_danger").val("密码格式不太对")
-			.animate({top:'36%'})
+			.animate({top:'39%'})
 			.css("display","inline");
 			break;
 		case 2:
 			$("#alert_danger").val("姓名错了吧-_-|")
-			.animate({top:'47%'})
+			.animate({top:'50%'})
 			.css("display","inline");
 			break;
 		case 3:
-			$("#alert_danger").val("手机号是胡写的吧")
-			.animate({top:'56%'})
+			$("#alert_danger").val("手机号是乱写的吧")
+			.animate({top:'61%'})
 			.css("display","inline");
 			break;
 	}
@@ -84,6 +84,25 @@ function continueStep(){
         // $("#form").submit();
     	// alert("总之好像出了些什么问题");
     }
+}
+
+function modifyCheck(name,id,phone){
+	nameRe=/[\u4e00-\u9fa5]{2,4}/;
+	IDre=/^(71113140)|(71113[1-4](([0-3][1-9])|([1-3]0)))$/;
+	phoneRe=/^(13|15|18)\d{9}$/;
+	if(!nameRe.test(name)){
+		alert("姓名错了吧-_-");
+	}
+	else if(!IDre.test(id)){
+		alert("学号是你吗");
+	}
+	else if(!phoneRe.test(phone)){
+		alert("手机号是乱写的吧");
+	}
+	else{
+		return 1;
+	}
+	return 0;
 }
         // $.post("../controller/register.php",
         // {
