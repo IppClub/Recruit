@@ -16,7 +16,7 @@ I++ 俱乐部14届招新报名
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
 
-<script type="text/javascript" src="../view/js/formChecker.js"></script>
+
 <style type="text/css">
 .info_frame{
     position: fixed;
@@ -27,6 +27,7 @@ I++ 俱乐部14届招新报名
 }
 .info_btn{
     position: fixed;
+
     top: 70%;
     width: 20%;
     left: 40%;
@@ -35,6 +36,7 @@ I++ 俱乐部14届招新报名
     font-size: 30px;
 }
 </style>
+
 <body>
 
 
