@@ -17,14 +17,14 @@ h2{
     position: fixed;
     top: 26%;
     width: 70%;
-    left: 39%;
+    left: 43%;
     height: 60%;
 }
 .info_btn{
     position: fixed;
     top: 70%;
     width: 20%;
-    left: 35%;
+    left: 42%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

@@ -29,7 +29,7 @@ I++ 俱乐部14届招新报名
     position: fixed;
     top: 70%;
     width: 20%;
-    left: 35%;
+    left: 40%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

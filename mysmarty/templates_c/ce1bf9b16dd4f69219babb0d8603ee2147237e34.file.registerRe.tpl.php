@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 07:33:33
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 18:28:07
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:210875361e222c55029-73528568%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1399095069,
+      1 => 1399131207,
       2 => 'file',
     ),
   ),
@@ -57,7 +57,7 @@ I++ 俱乐部14届招新报名
     position: fixed;
     top: 70%;
     width: 20%;
-    left: 35%;
+    left: 40%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

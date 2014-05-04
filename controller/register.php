@@ -1,11 +1,12 @@
 <?php 
 include("../model/DB.php");
 header("Content-Type:text/html;charset=UTF-8");
-// header('Content-type: application/json;charset=UTF-8');
-// $post_data = $_POST[]
-// $postData = json_decode($_POST);
-// echo $postData;
-// return;
+include("../model/conf.php");
+$referer=$ip.$subUrl."/view/index.html";
+if(strcmp($_SERVER['HTTP_REFERER'], $referer)!=0){
+	header("Location: ../index.html");
+	exit;
+}
 $name = $_POST["name"];
 $pwd = $_POST["pwd"];
 $studentID = $_POST["studentID"];
@@ -22,7 +23,7 @@ $smarty->config_dir='../mysmarty/configs';
 $smarty ->cache_dir='../mysmarty/cache';
 $smarty ->compile_dir='../mysmarty/templates_c';
 //上面四行为使用Smarty前的必要参数配置
-if(!preg_match("/^(71113140)|(71113[1-4]([0-3][1-9])|([1-3]0))$/",$studentID))
+if(!preg_match("/^(71113140)|(71113[1-4](([0-3][1-9])|([1-3]0)))$/",$studentID))
 {
 	$smarty->assign('info',"学号错了吧。。");
 	$smarty->display('info.tpl');

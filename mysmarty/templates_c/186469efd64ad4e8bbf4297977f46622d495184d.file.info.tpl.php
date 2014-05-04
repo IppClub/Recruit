@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 07:31:16
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-03 19:13:30
          compiled from "..\mysmarty\templates\info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:12395518a5d508b4f05-09048999%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '186469efd64ad4e8bbf4297977f46622d495184d' => 
     array (
       0 => '..\\mysmarty\\templates\\info.tpl',
-      1 => 1399094992,
+      1 => 1399137199,
       2 => 'file',
     ),
   ),
@@ -42,14 +42,14 @@ h2{
     position: fixed;
     top: 26%;
     width: 70%;
-    left: 39%;
+    left: 43%;
     height: 60%;
 }
 .info_btn{
     position: fixed;
     top: 70%;
     width: 20%;
-    left: 35%;
+    left: 42%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;
