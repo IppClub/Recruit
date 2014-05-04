@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 10:54:55
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 12:43:22
          compiled from "..\mysmarty\templates\info.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:101865365fdddd518d7-06027266%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '186469efd64ad4e8bbf4297977f46622d495184d' => 
     array (
       0 => '..\\mysmarty\\templates\\info.tpl',
-      1 => 1399193690,
+      1 => 1399200115,
       2 => 'file',
     ),
   ),
@@ -46,7 +46,7 @@ I++ 报名结果
     position: fixed;
     top: 26%;
     width: 70%;
-    left: 37%;
+    left: 39%;
     height: 60%;
 }
 .info_btn{
@@ -54,7 +54,7 @@ I++ 报名结果
     margin:top: 70%;
     width: 20%;
     top:65%;
-    left: 35%;
+    left: 38%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 11:01:09
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 12:45:52
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:18214536600cd7134c5-50550836%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1399194063,
+      1 => 1399200312,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 I++ 俱乐部14届招新报名
 </title>
 </head>
-<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
 <link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>

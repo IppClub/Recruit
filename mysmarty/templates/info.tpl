@@ -21,7 +21,7 @@ I++ 报名结果
     position: fixed;
     top: 26%;
     width: 70%;
-    left: 37%;
+    left: 39%;
     height: 60%;
 }
 .info_btn{
@@ -29,7 +29,7 @@ I++ 报名结果
     margin:top: 70%;
     width: 20%;
     top:65%;
-    left: 35%;
+    left: 38%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;

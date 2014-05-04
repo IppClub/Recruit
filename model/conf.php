@@ -1,4 +1,6 @@
 <?php
-$ip="http://100.64.2.16";
-$subUrl="/ipp/ipp_bak";
+$ip="http://localhost";
+$subUrl="";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br/>";
 ?>

@@ -6,7 +6,7 @@
 I++ 俱乐部14届招新报名
 </title>
 </head>
-<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
 <link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>

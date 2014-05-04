@@ -3,6 +3,8 @@ include("../model/DB.php");
 header("Content-Type:text/html;charset=UTF-8");
 include("../model/conf.php");
 $referer=$ip.$subUrl."/view/index.html";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br>";
 if(strcmp($_SERVER['HTTP_REFERER'], $referer)!=0){
 	header("Location: ../index.html");
 	exit;

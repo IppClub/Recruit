@@ -1,11 +1,4 @@
 Ipp Recruit
-=====================
+=======
 
-* Sign Up
-    * Preview (has some problem now..)
-
-* Sign In
-
-* Collaborators:
-    xhh
-    mexan
+Simple system for applying for IPP club member of recruiting in 2014
