@@ -1,22 +1,16 @@
-$(document).ready(function(){
-    var ie = !-[1,];
-    if (ie) {
-        window.location.href = "../view/loser.html";
+
+
+function timing(sec, t){
+    if (sec >= 1){
+        document.getElementById('backwards').innerHTML = "返回首页("+sec+")";
+        sec--;
+        t = setTimeout('timing('+sec+')',1000);
     }
-    // else {
-        // window.location = "./view/index.html";
-    // }
-    $("#headtitle").css("display","none")
-    .fadeIn("slow")
-    .css("display","inline");
-
-    $("#operatebtns").fadeOut().css("display","none");
-
-    $("#bgm").css("display","none")
-    .fadeIn("slow")
-    .css("display","inline");
-});
-
+    else {
+        clearTimeout(t);
+        window.location.href = "../../index.html";
+    }
+}    
 
 
 function hover(id,action){

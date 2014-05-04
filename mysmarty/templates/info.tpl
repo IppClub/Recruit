@@ -8,10 +8,15 @@ I++ 报名结果
 
 
 <script type="text/javascript" src="../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../view/js/bootstrap.js"></script>
+<script type="text/javascript" src="../view/js/actions.js"></script>
+<script type="text/javascript" src="../view/js/info.js"></script>
+
+
+
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.css"/>
-<link rel="stylesheet" type="text/css" href="../view/css/bootstrap-theme.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/buttons.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome.min.css"/>
 <link rel="stylesheet" type="text/css" href="../view/Buttons/css/font-awesome-ie7.min.css"/>
@@ -52,7 +57,7 @@ h1{ font-family: "Microsoft Yahei"; font-weight: bolder;}
 </div>
 
 <div id="info_btn">
-    <button onclick="redirect()" class="info_btn btn btn-primary btn-lg">回到首页</button>
+    <button id="backwards" onclick="redirect()" class="info_btn btn btn-primary btn-lg">回到首页</button>
 </div>
 
 </body>

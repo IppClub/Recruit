@@ -5,8 +5,13 @@
 <title>
 I++ 俱乐部14届招新报名
 </title>
-</head>
 <script type="text/javascript" src="../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../view/js/bootstrap.js"></script>
+<script type="text/javascript" src="../view/js/actions.js"></script>
+<script type="text/javascript" src="../view/js/info.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
@@ -44,6 +49,7 @@ h1{ font-family: "Microsoft Yahei"; font-weight: bold;}
 h2{ font-family: "Microsoft Yahei"; }
 
 </style>
+</head>
 
 <body>
 <div class="header">
@@ -57,7 +63,7 @@ h2{ font-family: "Microsoft Yahei"; }
     <h2 >电话：{$phone} </h2>
 </div>
 <div>
-    <button class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
+    <button id="backwards" class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
 </div>
 
 </body>
