@@ -29,17 +29,42 @@ else if(!preg_match("/^\d{11}$/",$phone)){
 	$smarty->display('info.tpl');
 }
 else{
-		$controller=new DB();
-		$controller->updateInfo($studentID,$name,$phone);
+
 		include("../libs/Smarty.class.php"); 
-		$smarty = new Smarty;
-		//下面的(你的网站目录)用绝对路径，可以用相对路径（./templates）
-		$smarty ->template_dir='../mysmarty/templates';
-		$smarty->config_dir='../mysmarty/configs';
-		$smarty ->cache_dir='../mysmarty/cache';
-		$smarty ->compile_dir='../mysmarty/templates_c';
-		//上面四行为使用Smarty前的必要参数配置
-		$smarty->assign('info',"修改成功");
-		$smarty->display('info.tpl');
+			$smarty = new Smarty;
+			//下面的(你的网站目录)用绝对路径，可以用相对路径（./templates）
+			$smarty ->template_dir='../mysmarty/templates';
+			$smarty->config_dir='../mysmarty/configs';
+			$smarty ->cache_dir='../mysmarty/cache';
+			$smarty ->compile_dir='../mysmarty/templates_c';
+			//上面四行为使用Smarty前的必要参数配置
+
+		$modifySession = $_POST["studentID"]."modify";
+		if(!isset($_SESSION[$modifySession])){
+			$controller=new DB();
+			$controller->updateInfo($studentID,$name,$phone);
+			
+			$smarty->assign('info',"修改成功");
+			$_SESSION[$modifySession] = time();
+			$smarty->display('info.tpl');
+		}
+		else{
+			$preModify = $_SESSION[$modifySession];
+			$curModify = time();
+			if($curModify - $preModify < 300){
+				$smarty->assign('info',"太频繁了,5分钟后再来");
+				$_SESSION[$modifySession]=time();
+				$smarty->display('info.tpl');
+		}
+		else{
+
+			$controller=new DB();
+			$controller->updateInfo($studentID,$name,$phone);
+			
+			$smarty->assign('info',"修改成功");
+			$_SESSION[$modifySession] = time();
+			$smarty->display('info.tpl');
+		}
+	}
 }
 ?>

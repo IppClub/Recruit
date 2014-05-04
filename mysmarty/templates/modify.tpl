@@ -68,8 +68,9 @@ h2{
 </div>
 <div id="modify_frame" class="modify_frame">
     <form id="modify_info" action="./infoModify.php" method=post>
-        <h2>姓名: <input class="input" type=text placeholder="姓名" id="name" name="name" value="{$name}" /></h2>
-        <h2>学号: <input class="input" type=text placeholder="学号" id="studentID" name="studentID" value="{$studentID}" /></h2>
+        
+        <h2>学号: <input class="input" type=text placeholder="学号" id="studentID" name="studentID" value="{$studentID}" readonly="readonly" style="background-color:#D8D8D8"/></h2>
+        <h2>姓名: <input class="input" type=text placeholder="姓名" id="name" name="name" value="{$name}"/></h2>
         <h2>电话: <input class="input" type=text placeholder="手机" id="phone" name="phone" value="{$phone}" /></h2>
     </form>
 </div>

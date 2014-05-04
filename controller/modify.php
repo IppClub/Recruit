@@ -18,24 +18,52 @@
 	$smarty ->cache_dir='../mysmarty/cache';
 	$smarty ->compile_dir='../mysmarty/templates_c';
 	//上面四行为使用Smarty前的必要参数配置
-	$controller=new DB();
-	$row=$controller->select_sentence("student_info","studentID",$_SESSION['studentID']);
-	if($row==0){
-		Header("Location:../controller/home.php");
-	}
-	else
-	{
-		$row=mysql_fetch_array($row);
 
-		$name=$row["name"];
-		$studentID=$row["studentID"];
-		$phone=$row["phone"];
-		
-		$_SESSION['name']=$name;
-		$smarty->assign('name',$name);
-		$smarty->assign('studentID',$studentID);
-		$smarty->assign('phone',$phone);
-		$smarty->display('modify.tpl');
-	}
+			$controller=new DB();
+			$row=$controller->select_sentence("student_info","studentID",$_SESSION['studentID']);
+			if($row==0){
+				Header("Location: ../index.html");
+			}
+			else
+			{
+				$loginSession = $_SESSION["studentID"]."login";
+				if(!isset($_SESSION[$loginSession])){
+					$row=mysql_fetch_array($row);
+
+					$name=$row["name"];
+					$studentID=$row["studentID"];
+					$phone=$row["phone"];
+					$_SESSION['name']=$name;
+					$smarty->assign('name',$name);
+					$smarty->assign('studentID',$studentID);
+					$smarty->assign('phone',$phone);
+					$_SESSION[$loginSession] = time();
+					$smarty->display('modify.tpl');
+				}
+				else{
+					$preModify = $_SESSION[$loginSession];
+					$curModify = time();
+					if($curModify - $preModify < 300){
+						$smarty->assign('info',"太频繁了,5分钟后再来");
+						$_SESSION[$loginSession]=time();
+						$smarty->display('info.tpl');
+					}
+					else{
+						$row=mysql_fetch_array($row);
+
+						$name=$row["name"];
+						$studentID=$row["studentID"];
+						$phone=$row["phone"];
+						$_SESSION['name']=$name;
+						$smarty->assign('name',$name);
+						$smarty->assign('studentID',$studentID);
+						$smarty->assign('phone',$phone);
+						$_SESSION[$loginSession] = time();
+						$smarty->display('modify.tpl');
+					}
+				}
+				
+			}
+
 	
 ?>

@@ -8,7 +8,7 @@ function timing(sec, t){
     }
     else {
         clearTimeout(t);
-        window.location.href = "../../index.html";
+        window.location.href = "../index.html";
     }
 }    
 

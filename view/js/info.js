@@ -1,3 +1,3 @@
 $(document).ready(function(){
-    timing(3);
+    timing(5);
 });

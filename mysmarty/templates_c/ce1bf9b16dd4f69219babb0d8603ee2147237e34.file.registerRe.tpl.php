@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 08:42:40
+<?php /* Smarty version Smarty-3.1.11, created on 2014-05-04 13:51:05
          compiled from "..\mysmarty\templates\registerRe.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:195775365e01565c7f3-06657513%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ce1bf9b16dd4f69219babb0d8603ee2147237e34' => 
     array (
       0 => '..\\mysmarty\\templates\\registerRe.tpl',
-      1 => 1399185739,
+      1 => 1399203866,
       2 => 'file',
     ),
   ),
@@ -33,8 +33,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <title>
 I++ 俱乐部14届招新报名
 </title>
-</head>
-<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../view/js/bootstrap.js"></script>
+<script type="text/javascript" src="../view/js/actions.js"></script>
+<script type="text/javascript" src="../view/js/info.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
@@ -50,41 +55,48 @@ I++ 俱乐部14届招新报名
 .info_frame{
     position: fixed;
     top: 26%;
-    width: 70%;
-    left: 39%;
+    width: 60%;
+    left: 40%;
     height: 60%;
 }
 .info_btn{
     position: fixed;
-
+    text-align: center;
     top: 70%;
     width: 20%;
-    left: 40%;
+    left: 41%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;
 }
+.header{
+    position: fixed;
+    left: 36%;
+    top: 15%;
+}
+h1{ font-family: "Microsoft Yahei"; font-weight: bold;}
+h2{ font-family: "Microsoft Yahei"; }
+
 </style>
+</head>
 
 <body>
-
-
 <div class="header">
     <h1>I++ 俱乐部14届招新报名</h1>
 </div>
 
 <div class="info_frame">
-    <h1 ><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
-<h1>
-    <h1 >学号：<?php echo $_smarty_tpl->tpl_vars['ID']->value;?>
- <h1>
-    <h1 >姓名：<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
- <h1>
-    <h1 >电话：<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
- <h1>
+    <h2 ><?php echo $_smarty_tpl->tpl_vars['info']->value;?>
+</h2>
+    <h2 >学号：<?php echo $_smarty_tpl->tpl_vars['ID']->value;?>
+ </h2>
+    <h2 >姓名：<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+ </h2>
+    <h2 >电话：<?php echo $_smarty_tpl->tpl_vars['phone']->value;?>
+ </h2>
 </div>
 <div>
-    <button class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
+    <button id="backwards" class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
 </div>
 
 </body>
