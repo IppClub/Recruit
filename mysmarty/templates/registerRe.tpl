@@ -5,8 +5,13 @@
 <title>
 I++ 俱乐部14届招新报名
 </title>
-</head>
-<link rel="stylesheet" type="text/css" href="../view/js/formChecker.js"/>
+<script type="text/javascript" src="../view/js/formChecker.js"></script>
+<script type="text/javascript" src="../view/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../view/js/bootstrap.js"></script>
+<script type="text/javascript" src="../view/js/actions.js"></script>
+<script type="text/javascript" src="../view/js/info.js"></script>
+
+
 <link rel="stylesheet" type="text/css" href="../view/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.css"/>
 <link rel="stylesheet" type="text/css" href="../view/css/bootstrap.min.css"/>
@@ -22,37 +27,44 @@ I++ 俱乐部14届招新报名
 .info_frame{
     position: fixed;
     top: 26%;
-    width: 70%;
-    left: 39%;
+    width: 60%;
+    left: 40%;
     height: 60%;
 }
 .info_btn{
     position: fixed;
-
+    text-align: center;
     top: 70%;
     width: 20%;
-    left: 40%;
+    left: 41%;
     height: 10%;
     font-family:"Microsoft Yahei";
     font-size: 30px;
 }
+.header{
+    position: fixed;
+    left: 36%;
+    top: 15%;
+}
+h1{ font-family: "Microsoft Yahei"; font-weight: bold;}
+h2{ font-family: "Microsoft Yahei"; }
+
 </style>
+</head>
 
 <body>
-
-
 <div class="header">
     <h1>I++ 俱乐部14届招新报名</h1>
 </div>
 
 <div class="info_frame">
-    <h1 >{$info}<h1>
-    <h1 >学号：{$ID} <h1>
-    <h1 >姓名：{$name} <h1>
-    <h1 >电话：{$phone} <h1>
+    <h2 >{$info}</h2>
+    <h2 >学号：{$ID} </h2>
+    <h2 >姓名：{$name} </h2>
+    <h2 >电话：{$phone} </h2>
 </div>
 <div>
-    <button class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
+    <button id="backwards" class="info_btn btn btn-primary btn-lg" onclick="redirect()">返回首页</button>
 </div>
 
 </body>

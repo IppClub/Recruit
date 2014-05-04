@@ -1,15 +1,16 @@
-$(document).ready(function(){
-    $("#headtitle").css("display","none")
-    .fadeIn("slow")
-    .css("display","inline");
 
-    $("#operatebtns").fadeOut().css("display","none");
 
-    $("#bgm").css("display","none")
-    .fadeIn("slow")
-    .css("display","inline");
-});
-
+function timing(sec, t){
+    if (sec >= 1){
+        document.getElementById('backwards').innerHTML = "返回首页("+sec+")";
+        sec--;
+        t = setTimeout('timing('+sec+')',1000);
+    }
+    else {
+        clearTimeout(t);
+        window.location.href = "../../index.html";
+    }
+}    
 
 
 function hover(id,action){
