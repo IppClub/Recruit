@@ -1,4 +1,4 @@
 <?php
-$ip="http://100.64.2.16";
+$ip="http://223.3.111.205";
 $subUrl="/ipp/ipp_bak";
 ?>
