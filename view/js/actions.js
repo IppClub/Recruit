@@ -1,4 +1,11 @@
 $(document).ready(function(){
+    var ie = !-[1,];
+    if (ie) {
+        window.location.href = "../view/loser.html";
+    }
+    // else {
+        // window.location = "./view/index.html";
+    // }
     $("#headtitle").css("display","none")
     .fadeIn("slow")
     .css("display","inline");

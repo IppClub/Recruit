@@ -4,14 +4,14 @@ class DB
 	public  $con;
 	function connect()
 	{
-		$this->con=mysql_connect("localhost","root","");
+		$this->con=mysql_connect("localhost","root","root");
 		if (!$this->con)
 		{		
 			die('Could not connect: ' . mysql_error());
 		}
 		
 		mysql_query("set names utf8",$this->con); 
-		mysql_select_db("ippclub", $this->con);
+		mysql_select_db("ipp", $this->con);
 	}
 	function select_sentence($tablename,$columnname,$var)
 	{
