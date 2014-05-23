@@ -7,7 +7,7 @@ function redirect() {
 function valideForm(name, pwd, id, phone)
 {
 	nameRe=/^[\u4e00-\u9fa5]{2,4}$/;
-	pwdRe=/\w{3,16}/;
+	pwdRe=/^[0-9a-zA-Z]{3,16}$/;
 	IDre=/^(71113140)|(71113[1-4](([0-3][1-9])|([1-3]0)))$/;
 	phoneRe=/^(13|15|18)\d{9}$/;
 	if (choice==1) {

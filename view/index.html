@@ -32,10 +32,9 @@ h2{font-family: "Microsoft Yahei",Verdana, Arial, Helvetica, sans-serif; color: 
 </head>
 
 <body>
-<div id="bgm" name="form_div" class="main_frame bg_image">
-</div>
-<div id="main_frame" class="main_frame">
-	<div id="headtitle" class="header">
+<div id="main_frame" class="main_frame ">
+	<!-- <div id="bgm"><img src="./resources/TempBgm.jpg"></div> -->
+	<div id="header" class="header">
 		<h1>I++ Club 2014招新</h1>
 	</div>
 	<div id="welcome_label" class="jumbotron" >
@@ -47,8 +46,8 @@ h2{font-family: "Microsoft Yahei",Verdana, Arial, Helvetica, sans-serif; color: 
 		<button class="btn btn-default btn-lg " id="login_choice" onclick="displayLoginSection()">报过名了？登录</button>
 	</div>
 
-	<div id="register_form" class="register_form">
-		<form id="form" method="post" >
+	<div id="register_form">
+		<form id="form" method="post" style="position:relative;width:600px;left:0;">
 		<div id="loginSection">
 			<h2>学号&nbsp;&nbsp;
 			<input class="input" type=text placeholder=" 71113****" id="studentID" name="studentID" onfocus="hideAlert()"/></h2>
@@ -61,13 +60,13 @@ h2{font-family: "Microsoft Yahei",Verdana, Arial, Helvetica, sans-serif; color: 
 			<h2>手机&nbsp;&nbsp;
 			<input class="input" type=text placeholder=" 18XXXXXXX" id="phone" name="phone" onfocus="hideAlert()"/></h2>
 		</div>
-		</form>
 		<input class="input" id="alert_danger" class="alert alert-danger" readonly="readonly"/>
+		</form>
 	</div>
 </div>
-<div id="operatebtns">
-	<a id="loginbtn" class="operatebtns btn btn-primary btn-lg" onclick="continueStep()">继续</a>
-	<a id="registerbtn" href="#" class="operatebtns btn btn-default btn-lg" onclick="backChocie()">返回</a>
+<div class="operatebtns">
+	<button class="loginbtn btn btn-primary btn-lg" onclick="continueStep()">继续</button>
+	<button class="loginbtn btn btn-default btn-lg" onclick="backChocie()">返回</button>
 </div>
 </body>
 </html>

@@ -8,33 +8,33 @@ function timing(sec, t){
     }
     else {
         clearTimeout(t);
-        window.location.href = "../index.html";
+        window.location.href = "../../index.html";
     }
 }    
 
 
-function hover(id,action){
-    obj=document.getElementById(id);
-    obj.src="./resources/"+action+"hover.png";
-}
-function leave(id,action){
-    obj=document.getElementById(id);
-    obj.src="./resources/"+action+".png";
-}
+// function hover(id,action){
+//     obj=document.getElementById(id);
+//     obj.src="./resources/"+action+"hover.png";
+// }
+// function leave(id,action){
+//     obj=document.getElementById(id);
+//     obj.src="./resources/"+action+".png";
+// }
 
 function backChocie(){
     $("#login_choice").fadeIn();
     $("#register_choice").fadeIn();
     $("#register_form").slideUp();
-    $("#operatebtns").css("display","none");
+    $(".operatebtns").css("display","none");
     
-    $("#welcome_label").fadeIn().css("display","inline");
+    $("#welcome_label").fadeIn().css("display","block");
 }
 
 function displayLoginSection(){
-    $("#operatebtns").css("display","none");
-    $("#operatebtns").fadeIn("slow");
-    $("#operatebtns").css("display","inline");
+    $(".operatebtns").css("display","none");
+    $(".operatebtns").fadeIn("slow");
+    $(".operatebtns").css("display","block");
 
     $("#welcome_label").css("display","none");
 
@@ -50,7 +50,7 @@ function displayLoginSection(){
 
 
 function displayRegisterSection(){
-    $("#operatebtns").css("display","none")
+    $(".operatebtns").css("display","none")
     .fadeIn("slow")
     .css("display","inline");
 
